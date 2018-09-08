@@ -58,7 +58,12 @@ public class MyClass {
                 System.out.println(task(operand3));
                 selectorTask();
                 break;
-
+            case "6":
+                System.out.println("Введите год");
+                long year = insertInput.nextLong();
+                System.out.println(task(year));
+                selectorTask();
+                break;
             default:
                     System.out.println("Такого номер нет");
                     insertInput.close();
@@ -94,6 +99,17 @@ public class MyClass {
     public static String task(String a){
 
         return  "Привет, " + a + "!";
+
+    }
+    public static String task(long year){
+        if((year % 100 == 0)&&(year % 400 != 0)){
+            return  "Год не высокосный!";
+        }
+        else if((year % 4 == 0)||(year % 400 == 0)){
+            return  "Год высокосный!";
+        }else{
+            return  "Год не высокосный!";
+        }
 
     }
 
