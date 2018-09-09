@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8d3d9a54-a040-4b64-9bea-98594e7ffdb7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../ArraysAndCycles/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FirstTask/MyClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FirstTask/MyClass.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ArraysAndCycles/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ArraysAndCycles/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ArraysAndCycles/out/production/ArraysAndCycles/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ArraysAndCycles/out/production/ArraysAndCycles/com/company/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ArraysAndCycles/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ArraysAndCycles/src/com/company/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
