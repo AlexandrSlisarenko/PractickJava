@@ -2,17 +2,21 @@ package com.company;
 
 import sun.awt.geom.AreaOp;
 
+import java.util.Random;
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+
         int [] arr = {1,0,0,1,1,0,0,0,1,0,1};
         //replaceZerobyone(arr);
         //arr = new int [8];
         //fillingAnArray(arr);
         //lessThenSixMultiplyByTwo();
         int [] arr1 = {23,5,1,6,0,45,3,2,78};
-        minMax(arr1);
+        //minMax(arr1);
+
+        int [][] arrTwo = new int[5][5];
+        unitsDiagonally(arrTwo);
     }
 
    static void replaceZerobyone(int [] arr){
@@ -63,5 +67,35 @@ public class Main {
         }
         System.out.println(min);
         System.out.println(max);
+   }
+   static void unitsDiagonally(int [][] arr){
+       Random ran = new Random();
+       int i;
+       int j;
+       for(i = 0; i < arr.length; i++){
+            for(j = 0; j < arr[i].length; j++){
+                //arr[i][j] = ran.nextInt(10);
+                arr[i][j] = 0;
+            }
+        }
+        printArray(arr);
+       System.out.println("Результат");
+       for (i =0;i < arr.length; i++){
+           arr[i][i] = 1;
+       }
+       j = arr.length-1;
+       for (i =0;i < arr.length; i++){
+           arr[i][j] = 1;
+           j--;
+       }
+       printArray(arr);
+   }
+   static void printArray(int [][] arr){
+       for(int i = 0; i < arr.length; i++){
+           for(int j = 0; j < arr[i].length; j++){
+               System.out.print(arr[i][j]+"\t");
+           }
+           System.out.println();
+       }
    }
 }
