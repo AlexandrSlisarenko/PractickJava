@@ -102,6 +102,8 @@ public class MyClass {
 
     }
     public static String task(long year){
+
+        String res;
         if((year % 100 == 0)&&(year % 400 != 0)){
             return  "Год не высокосный!";
         }
