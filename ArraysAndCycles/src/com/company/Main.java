@@ -3,6 +3,7 @@ package com.company;
 import sun.awt.geom.AreaOp;
 
 import java.util.Random;
+import java.util.Arrays;
 public class Main {
 
     public static void main(String[] args) {
@@ -12,11 +13,15 @@ public class Main {
         //arr = new int [8];
         //fillingAnArray(arr);
         //lessThenSixMultiplyByTwo();
-        int [] arr1 = {23,5,1,6,0,45,3,2,78};
+       // int [] arr1 = {23,5,1,6,0,45,3,2,78};
         //minMax(arr1);
 
-        int [][] arrTwo = new int[5][5];
-        unitsDiagonally(arrTwo);
+        //int [][] arrTwo = new int[5][5];
+        //unitsDiagonally(arrTwo);
+
+        int [] arr1 = {1, 1, 1, 2, 1};
+        //System.out.print(checkBalans(arr1));
+        printArray1(shiftingAnElement(arr1,8));
     }
 
    static void replaceZerobyone(int [] arr){
@@ -68,6 +73,7 @@ public class Main {
         System.out.println(min);
         System.out.println(max);
    }
+
    static void unitsDiagonally(int [][] arr){
        Random ran = new Random();
        int i;
@@ -90,6 +96,7 @@ public class Main {
        }
        printArray(arr);
    }
+
    static void printArray(int [][] arr){
        for(int i = 0; i < arr.length; i++){
            for(int j = 0; j < arr[i].length; j++){
@@ -98,4 +105,37 @@ public class Main {
            System.out.println();
        }
    }
+
+    static void printArray1(int [] arr){
+        for(int j = 0; j < arr.length; j++){
+            System.out.print(arr[j]+"\t");
+        }
+    }
+
+    static  boolean checkBalans(int [] arr){
+
+        boolean res = false;
+        int sum = 0;
+        for(int i = 0;i < arr.length; i++){
+            sum += arr[i];
+        }
+        return (sum % 2 == 0)? true : false;
+    }
+
+    static int [] shiftingAnElement(int [] arr, int shift){
+        int length = arr.length;
+        int new_length = Math.abs(shift) + arr.length;
+        arr = Arrays.copyOf(arr, new_length);
+        if(shift < 0){
+            int j = new_length -1;
+            for(int i = length -1;i >= 0; i--){
+                arr[j] = arr[i]; arr[i] = 0; j--;
+            }
+        }else{
+            for(int i = length;i < new_length; i++){
+                arr[i] = 0;
+            }
+        }
+        return arr;
+    }
 }
