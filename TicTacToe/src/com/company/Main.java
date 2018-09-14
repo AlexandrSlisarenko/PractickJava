@@ -25,7 +25,7 @@ public class Main {
         /*инициализация переменных*/
         SIZE_MAP = 3;
         mapGame = new char[SIZE_MAP][SIZE_MAP];
-        matrixStepComputer = new int[SIZE_MAP][SIZE_MAP];
+
         CELL_X = 'X';
         CELL_O = 'O';
         CELL_EMPTY = '@';
@@ -36,9 +36,7 @@ public class Main {
         countStepComputer = 0;
         countStepHuman =0;
 
-        for(int i =0;i<SIZE_MAP;i++)
-            for(int j =0;j<SIZE_MAP;j++)
-                matrixStepComputer[i][j] = 0;
+
 
 
         System.out.println("Hello, my friend!!! Will we play?");
@@ -49,6 +47,13 @@ public class Main {
 
     /*Создание поля игры*/
     private static void creatNewGame(){
+
+        matrixStepComputer = new int[SIZE_MAP][SIZE_MAP];
+        for(int i =0;i<SIZE_MAP;i++)
+            for(int j =0;j<SIZE_MAP;j++)
+                matrixStepComputer[i][j] = 0;
+
+
         mapGame = new char[SIZE_MAP][SIZE_MAP];
         for(int i = 0; i < SIZE_MAP; i++) {
             for(int j = 0; j < SIZE_MAP; j++) mapGame[i][j] = CELL_EMPTY;
@@ -70,7 +75,7 @@ public class Main {
             System.out.println();
         }
     }
-
+    /*распечатаем поле игры*/
     private static void printMapGame(int [][] map){
 
         System.out.println("Map Step Computer");
@@ -91,19 +96,23 @@ public class Main {
             COUNT_CELL_EMPTY --;
             countStepHuman++;
             printMapGame(mapGame);
-            if(is_Victory(CELL_X)){
-                System.out.println("Win "+CELL_X+" !!!!");
-                System.out.println("Победил за "+countStepHuman+" шагов!!!!");
-                break;
+            if (countStepHuman >= SIZE_MAP){
+                if (is_Victory(CELL_X)) {
+                    System.out.println("Win " + CELL_X + " !!!!");
+                    System.out.println("Won in " + countStepHuman + " step!!!!");
+                    break;
+                }
             }
             stepComputer();
             COUNT_CELL_EMPTY --;
             countStepComputer++;
             printMapGame(mapGame);
-            if(is_Victory(CELL_O)){
-                System.out.println("Win "+CELL_O+" !!!!");
-                System.out.println("Победил за "+countStepComputer+" шагов!!!!");
-                break;
+            if(countStepComputer >= SIZE_MAP) {
+                if (is_Victory(CELL_O)) {
+                    System.out.println("Win " + CELL_O + " !!!!");
+                    System.out.println("Won in " + countStepComputer + " step!!!!");
+                    break;
+                }
             }
 
         }while(!stopGame());
@@ -118,26 +127,27 @@ public class Main {
     /*Шаг человека*/
     private static void stepHuman(){
         boolean ok;
-        System.out.print("Хода за человеком, прошу ввести координаты.");
+        System.out.print("Next move after human, please enter the coordinates");
         do {
             System.out.println();
 
-            System.out.println("Введите X");
+            System.out.println("Enter X");
             x = scannerStepHuman.nextInt() -1;
             System.out.println();
-            System.out.println("Введите Y");
+            System.out.println("Enter Y");
             y = scannerStepHuman.nextInt()-1;
             ok = ((x >= 0 && x < SIZE_MAP && y >= 0 && y < SIZE_MAP)&& mapGame[y][x] == CELL_EMPTY)? false:true;
         }while (ok);
 
         mapGame[y][x] = CELL_X;
         matrixStepComputer[y][x] = -2;
+        updateMatrixStep(x,y);
     }
 
     /*Шаг компьютера*/
     private static void stepComputer(){
         boolean ok;
-        System.out.println("Хода за компьютером");
+        System.out.println("Next move after a computer");
         do {
             if(countStepComputer == 0) {
                 if (matrixStepComputer[0][0] == 0) {
@@ -158,7 +168,7 @@ public class Main {
 
         mapGame[y][x] = CELL_O;
         matrixStepComputer[y][x] = -1;
-        add_ves(x,y);
+        updateMatrixStep(x,y);
     }
 
     /*проверка на победу*/
@@ -222,7 +232,69 @@ public class Main {
         return result;
     }
 
-    /*Увеличить вес потенциального хода*/
+    /*Увеличить вес потенциального хода - по диагоналям*/
+    private static void updateMatrixStep(int x, int y){
+        int good=1;
+        while(y - good >= 0) {
+            if(matrixStepComputer[y - good][x] >= 0) {
+                matrixStepComputer[y - good][x]++;
+                good++;
+            } else break;
+        }
+        while(y + good < SIZE_MAP) {
+            if (matrixStepComputer[y + good][x] >= 0) {
+                matrixStepComputer[y + good][x]++;
+                good++;
+
+            }else break;
+        }
+        good = 1;
+        while(x - good >= 0) {
+            if (matrixStepComputer[y][x - good] >= 0) {
+                matrixStepComputer[y][x - good]++;
+                good++;
+            }else break;
+        }
+        while(x + good < SIZE_MAP) {
+            if (matrixStepComputer[y][x + good] >= 0) {
+                matrixStepComputer[y][x + good]++;
+                good++;
+
+            }else break;
+        }
+        good = 1;
+        while(x - good >= 0 && y - good >=0) {
+            if (matrixStepComputer[y - good][x - good] >= 0) {
+                matrixStepComputer[y - good][x - good]++;
+                good++;
+
+            }else break;
+        }
+        while(x + good < SIZE_MAP && y + good < SIZE_MAP) {
+            if (matrixStepComputer[y + good][x + good] >= 0) {
+                matrixStepComputer[y + good][x + good]++;
+                good++;
+
+            }else break;
+        }
+        good = 1;
+        while(x + good < SIZE_MAP && y - good >= 0) {
+            if (matrixStepComputer[y - good][x + good] >= 0) {
+                good++;
+
+            }else break;
+        }
+        while(x - good >= 0 && y + good < SIZE_MAP) {
+            if (0 <= matrixStepComputer[y + good][x - good]) {
+                good++;
+
+            }else break;
+        }
+
+
+
+    }
+    /*Увеличить вес потенциального хода - вкруг - первоначальная мысль заполнения, может потом пригодится - не использую*/
     private static void add_ves(int x, int y){
         if(y - 1 >= 0)
             if (matrixStepComputer[y - 1][x] >=0) { matrixStepComputer[y - 1][x]++;}
@@ -242,7 +314,7 @@ public class Main {
             if (matrixStepComputer[y + 1][x - 1] >=0) { matrixStepComputer[y + 1][x - 1]++;}
 
     }
-
+    /*Получение лучшего хода путем получаения максимального веса(первый)*/
     private static void bestStep(){
         int max = 0;
         for(int i = 0; i < SIZE_MAP; i++) {
@@ -255,5 +327,66 @@ public class Main {
           }
         }
     }
+    /*функция пока не используется - прогназирование победной диагонали*/
+   /* private static void bestStep_new(){
+        int good=1;
+        char player = 'w';
+        while(y - good >= 0) {
+            if (matrixStepComputer[y - good][x] >= 0) {
+                good++;
+                if(good == SIZE_MAP){
+                    bestStepComputer[0] = x;
+                    bestStepComputer[1] = y - good;
+                    return;
+                }
+            } else break;
+        }
+        while(y + good < SIZE_MAP) {
+            if (mapGame[y + good][x] == player) {
+                good++;
+                if(good == SIZE_MAP) return;
+            }else break;
+        }
+        good = 1;
+        while(x - good >= 0) {
+            if (mapGame[y][x - good] == player) {
+                good++;
+                if(good == SIZE_MAP) return;
+            }else break;
+        }
+        while(x + good < SIZE_MAP) {
+            if (mapGame[y][x + good] == player) {
+                good++;
+                if(good == SIZE_MAP) return;
+            }else break;
+        }
+        good = 1;
+        while(x - good >= 0 && y - good >=0) {
+            if (mapGame[y - good][x - good] == player) {
+                good++;
+                if(good == SIZE_MAP) return;
+            }else break;
+        }
+        while(x + good < SIZE_MAP && y + good < SIZE_MAP) {
+            if (mapGame[y + good][x + good] == player) {
+                good++;
+                if(good == SIZE_MAP) return;
+            }else break;
+        }
+        good = 1;
+        while(x + good < SIZE_MAP && y - good >= 0) {
+            if (mapGame[y - good][x + good] == player) {
+                good++;
+                if(good == SIZE_MAP) return;
+            }else break;
+        }
+        while(x - good >= 0 && y + good < SIZE_MAP) {
+            if (mapGame[y + good][x - good] == player) {
+                good++;
+                if(good == SIZE_MAP) return;
+            }else break;
+        }
+
+    }*/
 
 }
