@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aa8e53c6-a4c0-4f39-bcbe-d96122780d52" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="aa8e53c6-a4c0-4f39-bcbe-d96122780d52" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,7 +13,7 @@
     <session id="-2001882265">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.43" value="1" />
           <entry key="project.open.time.75" value="1" />
@@ -63,7 +60,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="100" />
     <option name="y" value="20" />
     <option name="width" value="1400" />
@@ -74,73 +71,7 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="TicTacToe" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TicTacToe" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TicTacToe" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TicTacToe" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TicTacToe" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TicTacToe" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TicTacToe" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TicTacToe" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TicTacToe" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TicTacToe" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-              <item name="TicTacToe" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TicTacToe" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TicTacToe" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-              <item name="TicTacToe" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TicTacToe" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TicTacToe" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-              <item name="TicTacToe" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TicTacToe" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TicTacToe" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TicTacToe" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TicTacToe" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536787393112" />
@@ -197,7 +128,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="886" extended-state="7" />
+    <frame x="-8" y="-8" width="1616" height="886" extended-state="6" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.25321338" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -208,7 +139,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32978722" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32978722" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.44414893" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
