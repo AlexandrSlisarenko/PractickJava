@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="47c83baf-0760-4ab1-bd34-163dff86cd9a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/company/Calculation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/VerticalLayout.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/Window.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Сalculator.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../OOP/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../OOP/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="47c83baf-0760-4ab1-bd34-163dff86cd9a" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -157,7 +151,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537827937641" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537828086334" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
