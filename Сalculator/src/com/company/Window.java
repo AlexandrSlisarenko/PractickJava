@@ -8,7 +8,7 @@ import java.lang.*;
 
 class Window {
     private JFrame calc;
-    private Calculation object_calc;
+    private Calculation object_calc; //объект который считает
 
     public Window(Calculation c){
 
@@ -20,119 +20,178 @@ class Window {
 
         //Получили понель калькулятора
         Container panel_calc = calc.getContentPane();
-        JLabel res = new JLabel("Введите первый оператор и нажинет Enter");
-        // Панель для заголовка
-        JPanel north_panel = new JPanel();
-        north_panel.setLayout(new FlowLayout(FlowLayout.CENTER));
-        north_panel.add(new JLabel("Арифметический калькулятор!"));
 
-        //добавили панель в фрейм
-        panel_calc.add(north_panel, BorderLayout.NORTH);
+        // Создаем панель формы
+        JPanel forma = new JPanel();
 
-        // Добавили кнопку Итого
-        JButton res_button = new JButton("Итого!");
-        res_button.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e) {
+        //задаем менеджер расположения
+        BoxLayout bl = new BoxLayout(forma, BoxLayout.Y_AXIS);
+        forma.setLayout(bl);
 
-                if(object_calc.getAr_move() != "нет") {
-                    res.setText("Ваш результат: "+object_calc.calc_move());
-                    object_calc.reset();
-                }
-            }
-        });
-
-        panel_calc.add(res_button, BorderLayout.SOUTH);
-
-        //добавили поле ввода
-
-        JPanel center_panel = new JPanel();
-
+        //поле ввода
         JTextField field = new JTextField(25);
-        field.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                if(object_calc.getAr_move() == "нет") {
-                    object_calc.setOper1(Integer.parseInt(field.getText()));
-                    res.setText("Нажмите на кнопку необходимого действие.");
-                }
-                else {
-                    object_calc.setOper2(Integer.parseInt(field.getText()));
-                    res.setText("Нажмите клавишу 'Итого!'");
-                }
-                field.setText("");
-            }
-        });
-        center_panel.add(field);
 
+        //выводить то что вводит пользователь
+        JLabel enter = new JLabel("Введите число и нажмите Enter");
+        enter.setBounds(0,0,200,50);
+
+        //задаем панель расположения поля
+        JPanel pfe = new JPanel(new FlowLayout(FlowLayout.CENTER));
+        pfe.add(new JLabel("Арифметический калькулятор пяти действий"));
+        pfe.add(field);
+
+        //добвляем понель с полем в панель формы
+        forma.add(pfe);
 
         //Создали поле кнопок действий
-        JPanel button_arifmitic_pannel =  new JPanel(new GridLayout(1,5,5,5));
+
+        JPanel button_arifmitic_pannel =  new JPanel(new GridLayout(1,0,5,5));
         JButton plus = new JButton("+");
-        plus.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                object_calc.setAr_move("+");
-                res.setText("Введите второй оператор и нажинет Enter");
-            }
-        });
         JButton minus = new JButton("-");
-        minus.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                object_calc.setAr_move("-");
-                res.setText("Введите второй оператор и нажинет Enter");
-            }
-        });
         JButton umn = new JButton("*");
-        umn.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                object_calc.setAr_move("*");
-                res.setText("Введите второй оператор и нажинет Enter");
-            }
-        });
         JButton del = new JButton("/");
-        del.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                object_calc.setAr_move("/");
-                res.setText("Введите второй оператор и нажинет Enter");
-            }
-        });
-        JButton sup = new JButton("степень");
-        sup.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                object_calc.setAr_move("степень");
-                res.setText("Введите второй оператор и нажинет Enter");
-            }
-        });
+        JButton sup = new JButton("sup");
+
         button_arifmitic_pannel.add(plus);
         button_arifmitic_pannel.add(minus);
         button_arifmitic_pannel.add(umn);
         button_arifmitic_pannel.add(del);
         button_arifmitic_pannel.add(sup);
-        center_panel.add(button_arifmitic_pannel);
 
+        //центрируем кнопки
+        JPanel ar_butt = new JPanel(new FlowLayout(FlowLayout.CENTER));
+        ar_butt.add (button_arifmitic_pannel);
+
+        //добавляем кнопки в форму
+        forma.add(ar_butt);
 
         //результат
+        JButton res_button = new JButton("Итого!");
 
-        res.setBounds(10,10,150,20);
-        center_panel.add(res);
-
-       //
+        //создаем панель для вывода хода и результата вычисления
+        JPanel butt = new JPanel(new FlowLayout(FlowLayout.CENTER));
+        butt.add(res_button);
+        JPanel enter_panel = new JPanel(new FlowLayout(FlowLayout.CENTER));
+        enter_panel.add(enter);
+        forma.add(enter_panel);
+        forma.add(butt);
+        forma.setSize(panel_calc.getWidth(), panel_calc.getHeight());
+        panel_calc.add(forma);
+        //
        //center.add(center_panel);
-        panel_calc.add(center_panel,BorderLayout.CENTER);
         //calc.add(panel_calc);
-        calc.setSize(350,400);
+        calc.setSize(400,250);
         calc.setLocation(100,100);
         //calc.pack();
         calc.setVisible(true);
+
+
+        ///...Слушатели...
+
+        //поле ввода
+        field.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(object_calc.getAr_move() == "нет") {
+                    object_calc.setOper1(field.getText());
+                    if(TestData.correctData(field.getText())){
+                        enter.setText(field.getText());
+                        object_calc.setAr_move("да");
+                    }
+                    else {
+                        JOptionPane.showMessageDialog(forma,
+                                "Ошибка ввода!",
+                                "ERROR!!!",
+                                JOptionPane.ERROR_MESSAGE);
+                    }
+
+
+                }
+                else {
+                    object_calc.setOper2(field.getText());
+                    if(TestData.correctData(field.getText()))enter.setText(enter.getText()+field.getText());
+                    else {
+                        JOptionPane.showMessageDialog(forma,
+                                "Ошибка ввода!",
+                                "ERROR!!!",
+                                JOptionPane.ERROR_MESSAGE);
+                    }
+                    System.out.println(object_calc.getOper2());
+
+                }
+
+                field.setText("");
+            }
+
+        });
+
+        //кнопка плюс
+        plus.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(object_calc.getAr_move() == "да") {
+                    object_calc.setAr_move("+");
+                    enter.setText(enter.getText() + " + ");
+                }
+            }
+        });
+
+        //кнопка минус
+        minus.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(object_calc.getAr_move() == "да") {
+                    object_calc.setAr_move("-");
+                    enter.setText(enter.getText() + " - ");
+                }
+            }
+        });
+
+        //кнопка умножения
+        umn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(object_calc.getAr_move() == "да") {
+                    object_calc.setAr_move("*");
+                    enter.setText(enter.getText() + " * ");
+                }
+            }
+        });
+
+        //кнопка деления
+        del.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(object_calc.getAr_move() == "да") {
+                    object_calc.setAr_move("/");
+                    enter.setText(enter.getText() + " / ");
+                }
+            }
+        });
+
+        //кнопка степень
+        sup.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(object_calc.getAr_move() == "да") {
+                    object_calc.setAr_move("степень");
+                    enter.setText(enter.getText() + " в степени ");
+                }
+            }
+        });
+
+        //результат
+        res_button.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent e) {
+
+                if(object_calc.getAr_move() != "нет") {
+                    enter.setText(enter.getText()+" = "+object_calc.calc_move());
+                    object_calc.reset();
+                }
+            }
+        });
+
+
     }
 
-
-
-    public JFrame getCalc() {
-        return calc;
-    }
 }

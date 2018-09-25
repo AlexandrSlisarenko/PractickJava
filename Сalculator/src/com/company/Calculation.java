@@ -1,9 +1,12 @@
 package com.company;
 
+
+
 class Calculation {
     private int oper1;
     private int oper2;
     private String ar_move;
+
 
     public Calculation(){
 
@@ -19,19 +22,21 @@ class Calculation {
     }
 
 
+
+
     public int getOper1(){
         return oper1;
     }
 
-    public void setOper1(int op){
-        oper1 = op;
+    public void setOper1(String op){
+        if (TestData.correctData(op)) oper1 = Integer.parseInt(op);
     }
     public int getOper2(){
         return oper2;
     }
 
-    public void setOper2(int op){
-        oper2 = op;
+    public void setOper2(String op){
+        if (TestData.correctData(op)) oper2 = Integer.parseInt(op);
     }
     public String getAr_move(){
         return ar_move;
