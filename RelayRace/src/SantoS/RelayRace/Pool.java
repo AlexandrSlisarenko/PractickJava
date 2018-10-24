@@ -11,4 +11,9 @@ public class Pool extends Obstacle{
     public void doit(Competitor com){
         com.swim(this.range);
     }
+
+    @Override
+    public String name() {
+        return "pool";
+    }
 }

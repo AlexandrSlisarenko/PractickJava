@@ -5,5 +5,5 @@ public interface Competitor {
     void swim(int dist);
     void jump(int dist);
     boolean isOnDistanc();
-    void info(String getInfoPlayer);
+    void info();
 }

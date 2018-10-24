@@ -11,5 +11,8 @@ public class Cross extends Obstacle{
         com.run(this.range);
     }
 
+    public String name() {
+        return "cross";
+    }
 
 }

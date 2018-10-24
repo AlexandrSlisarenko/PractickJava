@@ -1,22 +1,30 @@
 package SantoS.RelayRace;
 
 public class ObstacleСourse {
-    Obstacle [] line;
-    int countObstacl;
+    private Obstacle [] track;
+    private int countObstacl;
 
     public ObstacleСourse(){
+        track = new Obstacle [6];
         countObstacl = 0;
-        line[countObstacl] = new Wall(1);
+        track[countObstacl] = new Wall(1);
         countObstacl++;
-        line[countObstacl] = new Cross(900);
+        track[countObstacl] = new Cross(900);
         countObstacl++;
-        line[countObstacl] = new Cross(1200);
+        track[countObstacl] = new Cross(1200);
         countObstacl++;
-        line[countObstacl] = new Pool(600);
+        track[countObstacl] = new Pool(600);
         countObstacl++;
-        line[countObstacl] = new Wall(2);
+        track[countObstacl] = new Wall(2);
         countObstacl++;
-        line[countObstacl] = new Cross(300);
-          
+        track[countObstacl] = new Cross(300);
+
+    }
+
+    public Obstacle getObstacle(int i){
+        return this.track[i];
+    }
+    public int getCountObstacl(){
+        return this.countObstacl;
     }
 }

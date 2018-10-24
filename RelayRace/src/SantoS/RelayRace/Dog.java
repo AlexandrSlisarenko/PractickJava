@@ -6,20 +6,4 @@ public class Dog extends Animal{
         super(name, run_d, jump_h, swim_d, onDist, type, breed, v);
     }
 
-    @Override
-    public void getInfo() {
-        if (this.isOnDistanc()) {
-            String info = this.type + " породы " + this.breed + " по кличке " + this.name + " прошла препятствие!!!";
-            this.info(info);
-            this.info(this.vote);
-        }else {
-            String info = this.type + " породы " + this.breed + " по кличке " + this.name + " не прошла препятствие((((";
-            this.info(info);
-        }
-
-    }
-
-
-
-
 }

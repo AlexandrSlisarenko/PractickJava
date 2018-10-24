@@ -11,4 +11,9 @@ public class Wall extends Obstacle{
         com.jump(this.height);
     }
 
+    @Override
+    public String name() {
+        return "wall";
+    }
+
 }
