@@ -3,20 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ff5b29aa-2a2a-4aeb-b8aa-9bf14e7e31a4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SantoS/RelayRace/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SantoS/RelayRace/Animal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SantoS/RelayRace/Cat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SantoS/RelayRace/Cat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SantoS/RelayRace/Competitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SantoS/RelayRace/Competitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SantoS/RelayRace/Cross.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SantoS/RelayRace/Cross.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SantoS/RelayRace/Dog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SantoS/RelayRace/Dog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SantoS/RelayRace/Human.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SantoS/RelayRace/Human.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SantoS/RelayRace/Men.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SantoS/RelayRace/Men.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SantoS/RelayRace/Obstacle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SantoS/RelayRace/Obstacle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SantoS/RelayRace/ObstacleСourse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SantoS/RelayRace/ObstacleСourse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SantoS/RelayRace/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SantoS/RelayRace/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SantoS/RelayRace/Pool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SantoS/RelayRace/Pool.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SantoS/RelayRace/RelayRace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SantoS/RelayRace/RelayRace.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SantoS/RelayRace/Team.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SantoS/RelayRace/Team.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SantoS/RelayRace/Wall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SantoS/RelayRace/Wall.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,10 +15,11 @@
     <session id="342184205">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.50" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.open.time.54" value="1" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -47,23 +34,23 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="1684" />
+          <entry key="java" value="1686" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1684" />
+          <entry key="JAVA" value="1686" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SantoS/RelayRace/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="40">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            <state relative-caret-position="200">
+              <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -71,7 +58,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SantoS/RelayRace/RelayRace.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1152">
+            <state relative-caret-position="1460">
               <caret line="73" column="5" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
             </state>
           </provider>
@@ -80,7 +67,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SantoS/RelayRace/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1440">
+            <state relative-caret-position="1400">
               <caret line="72" selection-start-line="72" selection-end-line="72" />
               <folding>
                 <element signature="e#1981#1982#0" expanded="true" />
@@ -93,7 +80,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SantoS/RelayRace/Pool.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
+            <state relative-caret-position="240">
               <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
               <folding>
                 <element signature="e#101#102#0" expanded="true" />
@@ -110,7 +97,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SantoS/RelayRace/ObstacleСourse.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="535">
+            <state relative-caret-position="480">
               <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
               <folding>
                 <element signature="e#644#645#0" expanded="true" />
@@ -122,11 +109,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/SantoS/RelayRace/Men.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="140">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
             </state>
           </provider>
         </entry>
@@ -143,7 +130,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SantoS/RelayRace/Team.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="515">
+            <state relative-caret-position="960">
               <caret line="58" column="5" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
               <folding>
                 <element signature="e#526#527#0" expanded="true" />
@@ -164,7 +151,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SantoS/RelayRace/Wall.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
+            <state relative-caret-position="200">
               <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
               <folding>
                 <element signature="e#102#103#0" expanded="true" />
@@ -209,7 +196,6 @@
         <option value="$PROJECT_DIR$/src/SantoS/RelayRace/Dog.java" />
         <option value="$PROJECT_DIR$/src/SantoS/RelayRace/Animal.java" />
         <option value="$PROJECT_DIR$/src/SantoS/RelayRace/Human.java" />
-        <option value="$PROJECT_DIR$/src/SantoS/RelayRace/Men.java" />
         <option value="$PROJECT_DIR$/src/SantoS/RelayRace/Obstacle.java" />
         <option value="$PROJECT_DIR$/src/SantoS/RelayRace/ObstacleСourse.java" />
         <option value="$PROJECT_DIR$/src/SantoS/RelayRace/Player.java" />
@@ -217,10 +203,12 @@
         <option value="$PROJECT_DIR$/src/SantoS/RelayRace/RelayRace.java" />
         <option value="$PROJECT_DIR$/src/SantoS/RelayRace/Team.java" />
         <option value="$PROJECT_DIR$/src/SantoS/RelayRace/Wall.java" />
+        <option value="$PROJECT_DIR$/src/SantoS/RelayRace/Main.java" />
+        <option value="$PROJECT_DIR$/src/SantoS/RelayRace/Men.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="793" />
     <option name="width" value="814" />
     <option name="height" value="877" />
@@ -233,7 +221,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -256,12 +243,13 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
       <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540401045397" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540401052676" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -306,10 +294,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="793" y="0" width="814" height="877" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1616" height="886" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19363396" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.09640103" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -318,7 +305,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32978722" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32974428" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -411,43 +398,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SantoS/RelayRace/Human.java">
+    <entry file="file://$PROJECT_DIR$/src/SantoS/RelayRace/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        <state relative-caret-position="200">
+          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SantoS/RelayRace/Men.java">
+    <entry file="file://$PROJECT_DIR$/src/SantoS/RelayRace/RelayRace.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SantoS/RelayRace/Obstacle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="34" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SantoS/RelayRace/ObstacleСourse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="535">
-          <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
-          <folding>
-            <element signature="e#644#645#0" expanded="true" />
-            <element signature="e#680#681#0" expanded="true" />
-            <element signature="e#714#715#0" expanded="true" />
-            <element signature="e#754#755#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="1460">
+          <caret line="73" column="5" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SantoS/RelayRace/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1440">
+        <state relative-caret-position="1400">
           <caret line="72" selection-start-line="72" selection-end-line="72" />
           <folding>
             <element signature="e#1981#1982#0" expanded="true" />
@@ -458,7 +425,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SantoS/RelayRace/Pool.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
+        <state relative-caret-position="240">
           <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
           <folding>
             <element signature="e#101#102#0" expanded="true" />
@@ -471,16 +438,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SantoS/RelayRace/RelayRace.java">
+    <entry file="file://$PROJECT_DIR$/src/SantoS/RelayRace/ObstacleСourse.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1152">
-          <caret line="73" column="5" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
+        <state relative-caret-position="480">
+          <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+          <folding>
+            <element signature="e#644#645#0" expanded="true" />
+            <element signature="e#680#681#0" expanded="true" />
+            <element signature="e#714#715#0" expanded="true" />
+            <element signature="e#754#755#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SantoS/RelayRace/Obstacle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="34" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SantoS/RelayRace/Team.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="515">
+        <state relative-caret-position="960">
           <caret line="58" column="5" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
           <folding>
             <element signature="e#526#527#0" expanded="true" />
@@ -499,7 +479,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SantoS/RelayRace/Wall.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
+        <state relative-caret-position="200">
           <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
           <folding>
             <element signature="e#102#103#0" expanded="true" />
@@ -512,10 +492,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SantoS/RelayRace/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/SantoS/RelayRace/Human.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="80">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SantoS/RelayRace/Men.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
