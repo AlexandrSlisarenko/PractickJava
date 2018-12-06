@@ -1,0 +1,11 @@
+#messageBox{
+    -fx-background-image:url('fon.jpg');
+    -fx-background-size:cover;
+
+}
+
+#messageBox TextField{
+    -fx-border:none;
+    -fx-opacity:0.5;
+    -fx-width:60%;
+}
