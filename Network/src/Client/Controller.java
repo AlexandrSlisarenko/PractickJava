@@ -16,6 +16,8 @@ import java.io.IOException;
 import java.net.Socket;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.net.ServerSocket;
+
 
 
 public class Controller implements Initializable {
@@ -47,18 +49,19 @@ public class Controller implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
 
         try {
+
             socket = new Socket(IP_ADRESS,PORT);
             in = new DataInputStream(socket.getInputStream());
             out = new DataOutputStream(socket.getOutputStream());
-
             new Thread(new Runnable() {
+
                 @Override
                 public void run() {
-                    try{
-                        while (true){
+                    try {
+                        while (true) {
                             String str = in.readUTF();
-                            if(str.equals("/serverClose")) break;
-                            if(str != " ") {
+                            if (str.equals("/serverClose")) break;
+                            if (str != " ") {
                                 TextField msg = new TextField();
                                 msg.setText(str + "\n");
                                 if (messageBox.getChildren().size() % 2 != 0)
@@ -67,13 +70,12 @@ public class Controller implements Initializable {
 
                             }
                         }
-                    }catch (IOException e){
+                    } catch (IOException e) {
                         e.printStackTrace();
-                    }
-                    finally {
+                    } finally {
                         try {
                             socket.close();
-                        }catch (IOException e){
+                        } catch (IOException e) {
                             e.printStackTrace();
                         }
                     }

@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="399a946f-4181-454a-a5c1-f145a1702ea7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/LearnThread/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/LearnThread/TimeRunMetod.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/LearnThread/TimeRunThreadMetod.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../EnumAndException/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../EnumAndException/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Generic/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Generic/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyChat/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MyChat/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyChat/out/production/MyChat/Server/Server.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyChat/out/production/MyChat/sample/Controller$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyChat/out/production/MyChat/sample/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/../MyChat/out/production/MyChat/sample/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Network/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Network/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Network/src/Client/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Network/src/Client/Controller.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,10 +21,11 @@
     <session id="-1259457842">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
+          <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.90" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -53,7 +55,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/LearnThread/TimeRunMetod.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
+            <state relative-caret-position="800">
               <caret line="40" selection-start-line="40" selection-end-line="40" />
             </state>
           </provider>
@@ -99,7 +101,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="793" />
     <option name="width" value="814" />
     <option name="height" value="877" />
@@ -110,7 +112,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -133,8 +136,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -186,9 +188,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="886" extended-state="6" />
+    <frame x="-8" y="-8" width="1616" height="886" extended-state="7" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25321338" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25642672" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -247,7 +249,7 @@
     <entry file="file://$PROJECT_DIR$/src/Lea/Main.java" />
     <entry file="file://$PROJECT_DIR$/src/LearnThread/TimeRunMetod.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
+        <state relative-caret-position="800">
           <caret line="40" selection-start-line="40" selection-end-line="40" />
         </state>
       </provider>
