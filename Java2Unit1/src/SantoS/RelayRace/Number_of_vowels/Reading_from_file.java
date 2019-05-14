@@ -21,6 +21,7 @@ public class Reading_from_file {
                 System.out.println(strLine);
                 lines[i] = strLine;
                 i++;
+                if(i == countL)break;
             }
         }catch (IOException e){
             System.out.println("Ошибка");

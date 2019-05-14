@@ -8,6 +8,8 @@ public class Main {
 	// write your code here
         Reading_from_file red = new Reading_from_file();
         String [] f = red.read();
-        System.out.println(f.length);
+        MyRegEx reg = new MyRegEx();
+        System.out.println(reg.getCountMatchesInFile("aueiy",f));
+
     }
 }
