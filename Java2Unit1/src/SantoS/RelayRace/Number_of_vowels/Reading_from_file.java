@@ -27,8 +27,8 @@ public class Reading_from_file {
             System.out.println("Ошибка");
         }
         //System.out.printf("Путь к файлу: %s \n", patch);
-        inC.close();
-        inp.close();
+        //inC.close();
+        //inp.close();
         return lines;
     }
 }
