@@ -39,6 +39,7 @@ public class CreateMarafon {
                     if(this.teamsM[j] == null){
                         this.teamsM[j] = new Team(tmpM[0],Integer.parseInt(tmpM[1]));
                         this.teams[i] = "";
+                        break;
                     }
                     j++;
                 }
@@ -58,13 +59,13 @@ public class CreateMarafon {
                 sportsmenParam = tmpM[1].split(",");
                 switch (tmpM[0]){
                     case "муж":
-                        teamsM[findTeam(sportsmenParam[0])].addSportsmen(new Men(sportsmenParam[1],Integer.parseInt(sportsmenParam[2]),Integer.parseInt(sportsmenParam[3]),sportsmenParam[4],Integer.parseInt(sportsmenParam[5]),Integer.parseInt(sportsmenParam[6]),Integer.parseInt(sportsmenParam[7])));
+                        this.teamsM[findTeam(sportsmenParam[0])].addSportsmen(new Men(sportsmenParam[1],Integer.parseInt(sportsmenParam[2]),Integer.parseInt(sportsmenParam[3]),sportsmenParam[4],Integer.parseInt(sportsmenParam[5]),Integer.parseInt(sportsmenParam[6]),Integer.parseInt(sportsmenParam[7])));
                         break;
                     case "жена":
-                        teamsM[findTeam(sportsmenParam[0])].addSportsmen(new Woman(sportsmenParam[1],Integer.parseInt(sportsmenParam[2]),Integer.parseInt(sportsmenParam[3]),sportsmenParam[4],Integer.parseInt(sportsmenParam[5]),Integer.parseInt(sportsmenParam[6]),Integer.parseInt(sportsmenParam[7])));
+                        this.teamsM[findTeam(sportsmenParam[0])].addSportsmen(new Woman(sportsmenParam[1],Integer.parseInt(sportsmenParam[2]),Integer.parseInt(sportsmenParam[3]),sportsmenParam[4],Integer.parseInt(sportsmenParam[5]),Integer.parseInt(sportsmenParam[6]),Integer.parseInt(sportsmenParam[7])));
                         break;
                     case "собака":
-                        teamsM[findTeam(sportsmenParam[0])].addSportsmen(new Dog(sportsmenParam[1],sportsmenParam[2],Integer.parseInt(sportsmenParam[3]),Integer.parseInt(sportsmenParam[4]),Integer.parseInt(sportsmenParam[5])));
+                        this.teamsM[findTeam(sportsmenParam[0])].addSportsmen(new Dog(sportsmenParam[1],sportsmenParam[2],Integer.parseInt(sportsmenParam[3]),Integer.parseInt(sportsmenParam[4]),Integer.parseInt(sportsmenParam[5])));
                         break;
                 }
 
@@ -75,7 +76,7 @@ public class CreateMarafon {
 
     private int findTeam(String name){
         for (int i = 0;i < this.teamsM.length; i++){
-            if(this.teamsM[i].getName() == name) return i;
+            if(this.teamsM[i].getName().equals(name)) return i;
         }
         return -1;
     }

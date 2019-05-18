@@ -1,5 +1,7 @@
 package SantoS.RelayRace.MARAFON;
 
+import SantoS.RelayRace.Number_of_vowels.Reading_from_file;
+
 public class Team {
     private String name;
     private Sportsmen [] st;
@@ -15,7 +17,10 @@ public class Team {
     }
     public void addSportsmen(Sportsmen sp){
         for (int i = 0;i<this.st.length;i++){
-            if (st[i] == null) st[i] = sp;
+            if (st[i] == null) {
+                st[i] = sp;
+                break;
+            }
         }
     }
     public void dellSportsmen(int i){
@@ -38,11 +43,15 @@ public class Team {
         while(tmp < st.length){
             if(st[tmp].sportsmenOnDistans()) da++;
             else net++;
-
+            tmp++;
         }
+        Reading_from_file record = new Reading_from_file();
         System.out.println("Команда называется: "+this.name);
+        record.RecordResult("Команда называется: "+this.name);
         System.out.println("Количество спортсменов прошедших соревнование: " + da);
+        record.RecordResult("Количество спортсменов прошедших соревнование: " + da);
         System.out.println("Количество сошедших с дистанции спортсменов: " + net);
+        record.RecordResult("Количество сошедших с дистанции спортсменов: " + net);
 
     }
 }

@@ -31,4 +31,18 @@ public class Reading_from_file {
         //inp.close();
         return lines;
     }
+
+    public void RecordResult(String s){
+        try(FileWriter writer = new FileWriter("D:/result.txt", true))
+        {
+            writer.write(s);
+            // запись по символам
+            writer.append('\n');
+            writer.flush();
+        }
+        catch(IOException ex){
+
+            System.out.println(ex.getMessage());
+        }
+    }
 }
