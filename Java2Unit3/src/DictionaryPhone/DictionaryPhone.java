@@ -16,10 +16,10 @@ public class DictionaryPhone
         this.dictionary = new HashMap<>();
     }
 
-    public void addRecord(String fio, String... phone_number){
+    public void addRecord(String fio, ArrayList<String> phone_number){
         ArrayList<String> tmpP = new ArrayList<>();
-        for (int i = 0; i < phone_number.length; i++) {
-            if (testPhone(phone_number[i])){tmpP.add(phone_number[i]);}
+        for (int i = 0; i < phone_number.size(); i++) {
+            if (testPhone(phone_number.get(i))){tmpP.add(phone_number.get(i));}
         }
         if(tmpP.size() > 0) {
             this.dictionary.put(fio,tmpP);
