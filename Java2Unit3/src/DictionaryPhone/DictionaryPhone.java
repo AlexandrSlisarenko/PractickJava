@@ -29,6 +29,12 @@ public class DictionaryPhone
         }
     }
 
+    public void addPhoneInRecord(String fio,  ArrayList<String> numbers){
+        for (int i = 0; i < numbers.size() ; i++) {
+            this.dictionary.get(fio).add(numbers.get(i));
+        }
+    }
+
     private boolean testPhone(String ph){
         if(ph.length() != 10){
             System.out.println("Номер не корретной длинны, необходимо указать 10 символов  +7__________");
