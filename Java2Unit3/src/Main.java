@@ -21,18 +21,7 @@ public class Main {
                 WorkToDictionaryPhone w = new WorkToDictionaryPhone();
                 w.use();
                 break;
-            case 3:
 
-                System.out.println("Введите строку:");
-                Scanner sc1 = new Scanner(System.in);
-
-                    String line = sc1.nextLine();
-                sc1.close();
-                    System.out.println(line);
-
-
-
-                break;
 
         }
 

@@ -27,12 +27,13 @@ public class WorkToDictionaryPhone {
         System.out.println("0 - выход/завершение ввода");
 
        while (this.start){
-           System.out.println("Введите номер команду:");
+           System.out.println("Введите номер команды:");
            switch (this.setComand.nextInt()){
                case 1:
                    this.setFIO();
                    this.setNumbers();
                    this.dictionaryP.addRecord(this.fio,this.numbers);
+                   this.clearSetData();
                    break;
                case 2:
                    this.setFIO();
@@ -44,21 +45,27 @@ public class WorkToDictionaryPhone {
                    for (int i = 0; i < numbers.size(); i++) {
                        this.dictionaryP.removeRecordOrPhone(this.fio, this.numbers.get(i));
                    }
+                   this.clearSetData();
                    break;
                case 4:
                    this.setFIO();
                    this.setNumbers();
-                   this.dictionaryP.addPhoneInRecord(this.fio,this.numbers);
+                   if(this.dictionaryP.addPhoneInRecord(this.fio,this.numbers)) System.out.println("Номер/номера добавлены");
+                   else System.out.println("не существует такой записи");
+                   this.clearSetData();
                    break;
                case 5:
                    this.dictionaryP.printDictionary();
                    break;
                case 6:
                    this.setFIO();
-                   this.dictionaryP.findPh(this.fio);
+                   ArrayList<String> numbers = this.dictionaryP.findPh(this.fio);
+                   if(numbers.size() == 0) System.out.println("Такой записи нет!");
+                   else System.out.println(numbers.toString());
                    break;
                case 0:
                    this.start = false;
+                   System.out.println("Спасибо за использование!!!! Удачи!!!!");
                    break;
 
            }
@@ -73,10 +80,17 @@ public class WorkToDictionaryPhone {
     }
     private void setNumbers(){
         System.out.println("Введите телефон или телефоны в столбик, если закончили введите 0 и нажмите enter:");
-        while (!this.setComand.next().equals("0")){
 
-            this.numbers.add(this.setComand.next());
+        while (true){
+            String numb = this.setComand.next();
+            if(numb.equals("0")) break;
+            this.numbers.add(numb);
             System.out.println("Введите телефон или 0:");
         }
+    }
+
+    private void clearSetData(){
+        this.numbers.clear();
+        this.fio = "";
     }
 }
