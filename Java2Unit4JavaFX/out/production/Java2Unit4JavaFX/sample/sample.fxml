@@ -9,9 +9,18 @@
 <?import javafx.scene.layout.HBox?>
 <?scenebuilder-stylesheet /css/Style.css?>
 
+<?import java.net.URL?>
+<?import javafx.scene.control.ScrollPane?>
 <VBox fx:controller="sample.Controller"
       xmlns:fx="http://javafx.com/fxml" alignment="center">
-    <TextArea fx:id="jta" editable="false" VBox.vgrow="ALWAYS"></TextArea>
+    <stylesheets><URL value="@/css/Style.css"/></stylesheets>
+
+        <ScrollPane fx:id="jba1" >
+            <VBox fx:id="jboxMSG">
+
+            </VBox>
+        </ScrollPane>
+
     <HBox>
         <TextField fx:id="jtf" HBox.hgrow="ALWAYS" promptText="Введите текст" onAction="#sendMSG"/>
         <Button fx:id="jb1" text="Отправить" onAction="#sendMSG"></Button>

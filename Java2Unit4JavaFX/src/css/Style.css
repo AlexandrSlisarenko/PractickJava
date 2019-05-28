@@ -1,4 +1,15 @@
-#jb1 {
-    -fx-font: 20px;
+#jb1{
+    -fx-font-size: 12px;
+    -fx-text-fill:#fff;
+    -fx-background-color:#00f;
+}
+#jta{
+    -fx-background-color:#f00;
+}
+#jboxMSG .tabUser{
+      -fx-text-alignment:center;
+}
+.msg{
+    -fx-height:20px;
 
 }
