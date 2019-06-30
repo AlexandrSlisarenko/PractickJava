@@ -1,0 +1,741 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="42d81275-8110-46ae-bc96-92046775ae00" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/AbstractFactory/Developer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/AbstractFactory/Manager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/AbstractFactory/ManagerViewWorks_Singelton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/AbstractFactory/ProjectTeamFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/AbstractFactory/Tester.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/AbstractFactory/WebSiteProject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/AbstractFactory/banking/BankingManagerProject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/AbstractFactory/banking/BankingTeamFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/AbstractFactory/banking/JavaDeveloper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/AbstractFactory/banking/ManualTester.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/AbstractFactory/website/PhpDeveloper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/AbstractFactory/website/ViewTester.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/AbstractFactory/website/WebSiteManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/AbstractFactory/website/WebSiteTeamFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/Builder/CMS.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/Builder/Director.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/Builder/EnterpriseWebSite.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/Builder/VisitWebSiteBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/Builder/WebSiteRuner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/Builder/Website.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/Builder/WebsiteBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/Factory/CppDeveloper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/Factory/CppDeveloperFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/Factory/Developer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/Factory/DeveloperFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/Factory/JavaDeveloper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/Factory/JavaDeveloperFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/Factory/Programm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Threads/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Threads/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-1467615502">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="6" />
+          <entry key="project.open.time.42" value="1" />
+          <entry key="project.open.time.43" value="1" />
+          <entry key="project.open.time.45" value="1" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.open.time.61" value="1" />
+          <entry key="project.open.time.63" value="2" />
+          <entry key="project.opened" value="7" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="iml" value="1" />
+          <entry key="java" value="39" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="IDEA_MODULE" value="1" />
+          <entry key="JAVA" value="39" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="2561" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="2561" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/Builder/WebsiteBuilder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="3" column="4" lean-forward="true" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="10" />
+              <folding>
+                <element signature="e#145#146#0" expanded="true" />
+                <element signature="e#189#190#0" expanded="true" />
+                <element signature="e#219#220#0" expanded="true" />
+                <element signature="e#245#246#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/Builder/VisitWebSiteBuilder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+              <folding>
+                <element signature="e#152#153#0" expanded="true" />
+                <element signature="e#174#175#0" expanded="true" />
+                <element signature="e#236#237#0" expanded="true" />
+                <element signature="e#258#259#0" expanded="true" />
+                <element signature="e#315#316#0" expanded="true" />
+                <element signature="e#337#338#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SantoS/RelayRace/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="40">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/AlgoritmAndPattern.iml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/Builder/Website.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="373">
+              <caret line="23" column="4" lean-forward="true" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
+              <folding>
+                <element signature="e#183#184#0" expanded="true" />
+                <element signature="e#215#216#0" expanded="true" />
+                <element signature="e#250#251#0" expanded="true" />
+                <element signature="e#280#281#0" expanded="true" />
+                <element signature="e#319#320#0" expanded="true" />
+                <element signature="e#353#354#0" expanded="true" />
+                <element signature="e#398#399#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/Builder/EnterpriseWebSite.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="320">
+              <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+              <folding>
+                <element signature="e#150#151#0" expanded="true" />
+                <element signature="e#172#173#0" expanded="true" />
+                <element signature="e#239#240#0" expanded="true" />
+                <element signature="e#261#262#0" expanded="true" />
+                <element signature="e#320#321#0" expanded="true" />
+                <element signature="e#342#343#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/Builder/Director.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+              <folding>
+                <element signature="e#160#161#0" expanded="true" />
+                <element signature="e#197#198#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/Builder/WebSiteRuner.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="160">
+              <caret line="8" column="57" selection-start-line="8" selection-start-column="57" selection-end-line="8" selection-end-column="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/CreatedPatter.java" />
+        <option value="$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/Factory/Developer.java" />
+        <option value="$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/Factory/CppDeveloper.java" />
+        <option value="$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/Factory/JavaDeveloper.java" />
+        <option value="$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/Factory/DeveloperFactory.java" />
+        <option value="$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/Factory/JavaDeveloperFactory.java" />
+        <option value="$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/Factory/CppDeveloperFactory.java" />
+        <option value="$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/CreatedPatterAuto.java" />
+        <option value="$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/Factory/Programm.java" />
+        <option value="$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/AbstractFactory/Developer.java" />
+        <option value="$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/AbstractFactory/Tester.java" />
+        <option value="$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/AbstractFactory/Manager.java" />
+        <option value="$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/AbstractFactory/ManualTester.java" />
+        <option value="$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/AbstractFactory/PhpDeveloper.java" />
+        <option value="$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/AbstractFactory/ProjectManager.java" />
+        <option value="$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/AbstractFactory/ProjectTeamFactory.java" />
+        <option value="$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/AbstractFactory/banking/PhpDeveloper.java" />
+        <option value="$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/AbstractFactory/website/PhpDeveloper.java" />
+        <option value="$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/AbstractFactory/website/ViewTester.java" />
+        <option value="$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/AbstractFactory/website/WebSiteManager.java" />
+        <option value="$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/AbstractFactory/banking/BankingManagerProject.java" />
+        <option value="$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/AbstractFactory/banking/BankingTeamFactory.java" />
+        <option value="$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/AbstractFactory/website/WebSiteTeamFactory.java" />
+        <option value="$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/AbstractFactory/AuctionSite.java" />
+        <option value="$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/AbstractFactory/WebSiteProject.java" />
+        <option value="$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/AbstractFactory/ManagerViewWorks_Singelton.java" />
+        <option value="$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/Builder/Website.java" />
+        <option value="$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/Builder/CMS.java" />
+        <option value="$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/Builder/VisitWebSiteBuilder.java" />
+        <option value="$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/Builder/EnterpriseWebSite.java" />
+        <option value="$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/Builder/WebsiteBuilder.java" />
+        <option value="$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/Builder/Director.java" />
+        <option value="$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/Builder/WebSiteRuner.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-14" />
+    <option name="y" value="18" />
+    <option name="width" value="1612" />
+    <option name="height" value="876" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="AlgoritmAndPattern" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AlgoritmAndPattern" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AlgoritmAndPattern" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AlgoritmAndPattern" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AlgoritmAndPattern" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AlgoritmAndPattern" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="RelayRace" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AlgoritmAndPattern" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AlgoritmAndPattern" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="RelayRace" type="462c0819:PsiDirectoryNode" />
+              <item name="Created" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1561913205033" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="SantoS.RelayRace.Patterns.Created.Builder" />
+      <recent name="SantoS.RelayRace.Patterns.Created.AbstractFactory" />
+      <recent name="SantoS.RelayRace.Patterns.Created.Factory" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.WebSiteRuner">
+    <configuration name="AuctionSite" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="SantoS.RelayRace.Patterns.Created.AbstractFactory.AuctionSite" />
+      <module name="AlgoritmAndPattern" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="SantoS.RelayRace.Patterns.Created.AbstractFactory.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="SantoS.RelayRace.Main" />
+      <module name="AlgoritmAndPattern" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Programm" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="SantoS.RelayRace.Patterns.Created.Factory.Programm" />
+      <module name="AlgoritmAndPattern" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="SantoS.RelayRace.Patterns.Created.Factory.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WebSiteProject" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="SantoS.RelayRace.Patterns.Created.AbstractFactory.WebSiteProject" />
+      <module name="AlgoritmAndPattern" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="SantoS.RelayRace.Patterns.Created.AbstractFactory.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WebSiteRuner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="SantoS.RelayRace.Patterns.Created.Builder.WebSiteRuner" />
+      <module name="AlgoritmAndPattern" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="SantoS.RelayRace.Patterns.Created.Builder.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.Programm" />
+      <item itemvalue="Application.AuctionSite" />
+      <item itemvalue="Application.WebSiteProject" />
+      <item itemvalue="Application.WebSiteRuner" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.WebSiteRuner" />
+        <item itemvalue="Application.WebSiteProject" />
+        <item itemvalue="Application.AuctionSite" />
+        <item itemvalue="Application.Programm" />
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="42d81275-8110-46ae-bc96-92046775ae00" name="Default Changelist" comment="" />
+      <created>1561463626162</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1561463626162</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="54" y="-8" width="1554" height="916" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26974565" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32992327" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32992327" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Maven Projects" order="7" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/Factory/JavaDeveloper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/Factory/CppDeveloperFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/Factory/JavaDeveloperFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/Factory/DeveloperFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="50" selection-start-column="50" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/Factory/Programm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="13" column="62" selection-start-line="13" selection-start-column="62" selection-end-line="13" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/Factory/CppDeveloper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/Factory/Developer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/AbstractFactory/banking/ProjectManager.java" />
+    <entry file="file://$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/AbstractFactory/Developer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="3" column="28" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/AbstractFactory/Tester.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="3" column="27" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/AbstractFactory/Manager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="3" column="33" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/AbstractFactory/banking/BankingManagerProject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="8" column="61" selection-start-line="8" selection-start-column="61" selection-end-line="8" selection-end-column="61" />
+          <folding>
+            <element signature="e#239#240#0" expanded="true" />
+            <element signature="e#310#311#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/AbstractFactory/ProjectTeamFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/AbstractFactory/banking/ManualTester.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/AbstractFactory/banking/JavaDeveloper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/AbstractFactory/website/PhpDeveloper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+          <folding>
+            <element signature="e#228#229#0" expanded="true" />
+            <element signature="e#297#298#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/AbstractFactory/website/ViewTester.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="7" column="56" selection-start-line="7" selection-start-column="56" selection-end-line="7" selection-end-column="56" />
+          <folding>
+            <element signature="e#219#220#0" expanded="true" />
+            <element signature="e#285#286#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/AbstractFactory/AuctionSite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/AbstractFactory/website/WebSiteTeamFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#459#460#0" expanded="true" />
+            <element signature="e#486#487#0" expanded="true" />
+            <element signature="e#542#543#0" expanded="true" />
+            <element signature="e#569#570#0" expanded="true" />
+            <element signature="e#622#623#0" expanded="true" />
+            <element signature="e#649#650#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/Builder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/AbstractFactory/WebSiteProject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/AbstractFactory/banking/BankingTeamFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#459#460#0" expanded="true" />
+            <element signature="e#501#502#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/AbstractFactory/ManagerViewWorks_Singelton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_181/src.zip!/java/lang/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="234" column="18" selection-start-line="234" selection-start-column="18" selection-end-line="234" selection-end-column="18" />
+          <folding>
+            <element signature="e#10065#10066#0" expanded="true" />
+            <element signature="e#10148#10149#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/AbstractFactory/website/WebSiteManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="7" column="55" selection-start-line="7" selection-start-column="55" selection-end-line="7" selection-end-column="55" />
+          <folding>
+            <element signature="e#231#232#0" expanded="true" />
+            <element signature="e#295#296#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/Builder/CMS.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/Builder/WebSiteRuner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" column="57" selection-start-line="8" selection-start-column="57" selection-end-line="8" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/Builder/EnterpriseWebSite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+          <folding>
+            <element signature="e#150#151#0" expanded="true" />
+            <element signature="e#172#173#0" expanded="true" />
+            <element signature="e#239#240#0" expanded="true" />
+            <element signature="e#261#262#0" expanded="true" />
+            <element signature="e#320#321#0" expanded="true" />
+            <element signature="e#342#343#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/Builder/WebsiteBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="3" column="4" lean-forward="true" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="10" />
+          <folding>
+            <element signature="e#145#146#0" expanded="true" />
+            <element signature="e#189#190#0" expanded="true" />
+            <element signature="e#219#220#0" expanded="true" />
+            <element signature="e#245#246#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/Builder/Director.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+          <folding>
+            <element signature="e#160#161#0" expanded="true" />
+            <element signature="e#197#198#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/Builder/Website.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="23" column="4" lean-forward="true" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
+          <folding>
+            <element signature="e#183#184#0" expanded="true" />
+            <element signature="e#215#216#0" expanded="true" />
+            <element signature="e#250#251#0" expanded="true" />
+            <element signature="e#280#281#0" expanded="true" />
+            <element signature="e#319#320#0" expanded="true" />
+            <element signature="e#353#354#0" expanded="true" />
+            <element signature="e#398#399#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/Created/Builder/VisitWebSiteBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="e#152#153#0" expanded="true" />
+            <element signature="e#174#175#0" expanded="true" />
+            <element signature="e#236#237#0" expanded="true" />
+            <element signature="e#258#259#0" expanded="true" />
+            <element signature="e#315#316#0" expanded="true" />
+            <element signature="e#337#338#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SantoS/RelayRace/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SantoS/RelayRace/Patterns/CreatedPatterAuto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AlgoritmAndPattern.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+  </component>
+</project>
