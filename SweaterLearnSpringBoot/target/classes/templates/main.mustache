@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello!!!!</title>
+</head>
+<body>
+<h1> Hello, {{some}}</h1>
+<p>Форма добавления сообщений</p>
+<form method="post">
+    <input type="text" name="text" placeholder="Введите текст"/>
+    <input type="text" name="tag" placeholder="Введите тег"/>
+    <button type="submit" name="send">Добавить сообщение</button>
+</form>
+<p>Список сообщений</p>
+<form method="post" action="filtr">
+    <input type="text" name="tag">
+    <button type="submit">Фильтровать</button>
+</form>
+{{#messages}}
+<div>
+    <span style="font-weight:bold;">{{id}}</span>
+    <span>{{text}}</span>
+    <i>{{tag}}</i>
+</div>
+{{/messages}}
+</body>
+</html>
