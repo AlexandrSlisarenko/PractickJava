@@ -10,6 +10,7 @@ import ru.santos.sweaterlearnboot.domain.Message;
 import ru.santos.sweaterlearnboot.repos.MessageRepo;
 
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 
 @Controller
@@ -47,16 +48,18 @@ public class GreetingController {
         return "main";
     }
 
-    @PostMapping("filtr")
-    public String filtr(@RequestParam String tag, Map<String,Object> model){
+    @PostMapping("filter")
+    public String filter(@RequestParam String filter, Map<String,Object> model){
         model.put("some","Santos!!!");
-        Iterable<Message> messages;
-        if(tag != null && tag.isEmpty()) {
-            messages = messageRepo.findByTag(tag);
+       Iterable <Message> messages;
+       if(filter != null && !filter.isEmpty()) {
+            messages = messageRepo.findByTag(filter);
+            System.out.println("да");
         }else {
             messages = messageRepo.findAll();
+            System.out.println("Нет");
         }
-        model.put("messages",messages);
+        model.put("messages", messages);
         return  "main";
     }
 
