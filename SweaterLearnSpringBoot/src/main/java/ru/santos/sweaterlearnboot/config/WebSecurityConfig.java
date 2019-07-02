@@ -7,16 +7,15 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
-
-import javax.sql.DataSource;
+import ru.santos.sweaterlearnboot.service.UserService;
 
 
 @Configuration
 @EnableWebSecurity
-public class WevSecurityConfig extends WebSecurityConfigurerAdapter {
+public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+     @Autowired
+    private UserService userService;
 
-    @Autowired
-    private DataSource dataSource;
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
@@ -31,26 +30,11 @@ public class WevSecurityConfig extends WebSecurityConfigurerAdapter {
                     .logout()
                     .permitAll();
     }
-/*test_variant
-    @Bean
-    @Override
-    public UserDetailsService userDetailsService() {
-        UserDetails user =
-                User.withDefaultPasswordEncoder()
-                        .username("user")
-                        .password("pass")
-                        .roles("USER")
-                        .build();
 
-        return new InMemoryUserDetailsManager(user);
-    }
-*/
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.jdbcAuthentication().dataSource(dataSource)
-                .passwordEncoder(NoOpPasswordEncoder.getInstance())
-                .usersByUsernameQuery("select username, password, active from usr1 where username=?")
-                .authoritiesByUsernameQuery("select u.username, ur.roles from usr1 u inner join user_role1 ur on u.id = ur.user_id where u.username=?");
+        auth.userDetailsService(userService)
+                .passwordEncoder(NoOpPasswordEncoder.getInstance());
     }
 }
