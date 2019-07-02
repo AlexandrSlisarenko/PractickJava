@@ -1,4 +1,4 @@
-package ru.santos.sweaterlearnboot;
+package ru.santos.sweaterlearnboot.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -14,31 +14,24 @@ import java.util.List;
 import java.util.Map;
 
 @Controller
-public class GreetingController {
+public class MainController {
     @Autowired
     private MessageRepo messageRepo;
 
-    @GetMapping("/greeting")
-    public String greeting(@RequestParam(name="name", required=false, defaultValue = "HelloSpringBoot") String name,
-                           Map<String, Object> model){
-        model.put("name",name);
+    @GetMapping("/")
+    public String greeting(Map<String, Object> model){
         return "greeting";
     }
 
-    @GetMapping
+    @GetMapping("/main")
     public String main(Map<String,Object>model){
-        //приветствие
-        model.put("some","Santos!!!");
-
         //вывод сообщений
         Iterable<Message> messages = messageRepo.findAll();
         model.put("messages", messages);
         return "main";
     }
-    @PostMapping
+    @PostMapping("/main")
     public String add(@RequestParam String text, @RequestParam String tag, Map<String,Object> model){
-        model.put("some","Santos!!!");
-
         Message message = new Message(text,tag);
         messageRepo.save(message);
 
@@ -48,11 +41,10 @@ public class GreetingController {
         return "main";
     }
 
-    @PostMapping("filter")
+    @PostMapping("/filter")
     public String filter(@RequestParam String filter, Map<String,Object> model){
-        model.put("some","Santos!!!");
-       Iterable <Message> messages;
-       if(filter != null && !filter.isEmpty()) {
+        Iterable <Message> messages;
+        if(filter != null && !filter.isEmpty()) {
             messages = messageRepo.findByTag(filter);
             System.out.println("да");
         }else {
