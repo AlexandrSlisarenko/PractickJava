@@ -8,15 +8,16 @@
 <@formL.logout />
 </div>
 <p>Форма добавления сообщений</p>
-<form method="post">
+<form method="post" enctype="multipart/form-data">
     <input type="text" name="text" placeholder="Введите текст"/>
     <input type="text" name="tag" placeholder="Введите тег"/>
+    <input type="file" name="file" />
     <input type="hidden" name="_csrf" value="${_csrf.token}">
     <button type="submit" name="send">Добавить сообщение</button>
 </form>
 <p>Список сообщений</p>
 <form method="post" action="filter">
-    <input type="text" name="filter">
+    <input type="text" name="filter" value="${filter?ifExists}">
     <input type="hidden" name="_csrf" value="${_csrf.token}">
     <button type="submit">Фильтровать</button>
 </form>
@@ -26,6 +27,11 @@
     <span>${message.text}</span>
     <i>${message.tag}</i>
     <span style="font-weight:bold;">${message.authorName}</span>
+    <p>
+        <#if message.file??>
+             <img src="/img/${message.file}">
+        </#if>
+    </p>
 </div>
 <#else>
 <p>No messages</p>
