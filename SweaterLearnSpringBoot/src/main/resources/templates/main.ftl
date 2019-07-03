@@ -1,10 +1,11 @@
 <#import "parts/common.ftl" as baseContainer>
-<#import "parts/login.ftl" as form>
+<#import "parts/login.ftl" as formL>
+
 <@baseContainer.page>
 <h1>Сообщения и теги!!!!</h1>
+<p><a href="/user">Users List</a></p>
 <div>
-<@form.logout />
-
+<@formL.logout />
 </div>
 <p>Форма добавления сообщений</p>
 <form method="post">
@@ -15,7 +16,7 @@
 </form>
 <p>Список сообщений</p>
 <form method="post" action="filter">
-    <input type="text" name="filter">
+    <input type="text" name="filter" value="${filter?ifExists}}">
     <input type="hidden" name="_csrf" value="${_csrf.token}">
     <button type="submit">Фильтровать</button>
 </form>

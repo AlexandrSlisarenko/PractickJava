@@ -1,10 +1,11 @@
 <#import "parts/common.ftl" as baseContainer>
-<#import "parts/login.ftl" as form>
+<#import "parts/login.ftl" as formL>
+
 <@baseContainer.page>
 <h1>Сообщения и теги!!!!</h1>
+<p><a href="/user">Users List</a></p>
 <div>
-<@form.logout />
-
+<@formL.logout />
 </div>
 <p>Форма добавления сообщений</p>
 <form method="post">

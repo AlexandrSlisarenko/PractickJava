@@ -2,6 +2,6 @@
 <#import "parts/login.ftl" as form>
 <@baseContainer.page>
 <h1>Registration Page</h1>
-${message}
+${message?ifExists}
 <@form.login "/registration" />
 </@baseContainer.page>
