@@ -21,6 +21,10 @@
             </#if>
         </ul>
         <div class="navbar-text">${name}</div>
-        <@formL.logout />
+        <#if isLogin>
+            <@formL.logout />
+        <#else>
+            <a href="/login" class="btn btn-primary ml-3">Sign in</a>
+        </#if>
     </div>
 </nav>

@@ -8,7 +8,7 @@
         <label class="col-sm-2 col-form-label">Password</label>
         <div class="col-sm-5"><input type="password" name="password" class="form-control" placeholder="Enter yure password"/></div>
     </div>
-    <#if isRegisterForm>
+    <#if !isRegisterForm>
     <div class="form-group row">
         <label class="col-sm-2 col-form-label">Email</label>
         <div class="col-sm-5"><input type="email" name="email" class="form-control" placeholder="some@some.com"/></div>
