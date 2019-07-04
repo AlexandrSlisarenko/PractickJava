@@ -3,5 +3,5 @@
 <@baseContainer.page>
 <h1>Registration Page</h1>
 ${message?ifExists}
-<@form.login "/registration" />
+<@form.login "/registration" false/>
 </@baseContainer.page>

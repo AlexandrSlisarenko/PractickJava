@@ -1,39 +1,56 @@
 <#import "parts/common.ftl" as baseContainer>
-<#import "parts/login.ftl" as formL>
-
 <@baseContainer.page>
-<h1>Сообщения и теги!!!!</h1>
-<p><a href="/user">Users List</a></p>
-<div>
-<@formL.logout />
-</div>
-<p>Форма добавления сообщений</p>
-<form method="post" enctype="multipart/form-data">
-    <input type="text" name="text" placeholder="Введите текст"/>
-    <input type="text" name="tag" placeholder="Введите тег"/>
-    <input type="file" name="file" />
-    <input type="hidden" name="_csrf" value="${_csrf.token}">
-    <button type="submit" name="send">Добавить сообщение</button>
-</form>
-<p>Список сообщений</p>
+<h1>Messages Users</h1>
+
 <form method="post" action="filter">
-    <input type="text" name="filter" value="${filter?ifExists}">
-    <input type="hidden" name="_csrf" value="${_csrf.token}">
-    <button type="submit">Фильтровать</button>
+    <div class="form-row">
+        <div class="col-5">
+            <input type="text" name="filter" class="form-control" value="${filter?ifExists}">
+        </div>
+
+            <input type="hidden" name="_csrf" value="${_csrf.token}">
+        <div class="col-3">
+            <button type="submit" class="btn btn-primary">Filtr to tag</button>
+        </div>
+    </div>
 </form>
+<a class="btn btn-primary my-3" data-toggle="collapse" href="#collapseExample"
+   role="button" aria-expanded="false" aria-controls="collapseExample"> Add message
+</a>
+<div class="collapse mt-3" id="collapseExample">
+<form method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <div class="form-group col-7">
+            <input type="text" name="text" placeholder="Введите текст" class="form-control"/>
+        </div>
+        <div class="form-group col-7">
+            <input type="text" name="tag" placeholder="Введите тег" class="form-control"/>
+        </div>
+        <div class="form-group col-7">
+            <div class="custom-file">
+                <input type="file" name="file" id="customFile"/>
+                <label class="custom-file-label" for="customFile">Choose file</label>
+            </div>
+        </div>
+    <input type="hidden" name="_csrf" value="${_csrf.token}">
+    <button type="submit" name="send" class="btn btn-primary">Добавить сообщение</button>
+    </div>
+</form>
+</div>
+<div class="card-columns">
 <#list messages as message>
-<div>
-    <span style="font-weight:bold;">${message.id}</span>
-    <span>${message.text}</span>
-    <i>${message.tag}</i>
-    <span style="font-weight:bold;">${message.authorName}</span>
-    <p>
-        <#if message.file??>
-             <img src="/img/${message.file}">
-        </#if>
-    </p>
+<div class="card">
+    <#if message.file??>
+        <img class="card-img-top" src="/img/${message.file}">
+    </#if>
+    <div class="card-body">
+        <h5 class="card-title">${message.tag}</h5>
+        <p class="card-text">${message.text}</p>
+        <span style="font-weight:bold; text-align:right;">${message.authorName}</span>
+    </div>
 </div>
 <#else>
 <p>No messages</p>
 </#list>
+</div>
 </@baseContainer.page>
