@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import ru.santos.sweaterlearnboot.domain.Message;
 import ru.santos.sweaterlearnboot.domain.User;
+import ru.santos.sweaterlearnboot.messaging.Producer;
 import ru.santos.sweaterlearnboot.repos.MessageRepo;
 
 import java.io.File;
