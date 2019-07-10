@@ -1,15 +1,20 @@
 package ru.santos.sweaterlearnboot.domain;
 
-import org.hibernate.annotations.Fetch;
+import org.hibernate.validator.constraints.Length;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 
 @Entity
 public class Message {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
-    private Integer Id;
+    private Long Id;
+    @NotBlank(message = "Please fill the message")
+    @Length(max = 2048, message = "Message to long(2kB)")
     private String text;
+    @NotBlank(message = "Please fill the message")
+    @Length(max = 255, message = "Message to long(255)")
     private String tag;
 
     @ManyToOne(fetch = FetchType.EAGER)
@@ -30,11 +35,11 @@ public class Message {
         return author != null ? author.getUsername(): "<not Author>";
     }
 
-    public Integer getId() {
+    public Long getId() {
         return Id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         Id = id;
     }
 

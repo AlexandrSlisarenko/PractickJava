@@ -43,7 +43,7 @@ public class Producer {
 
     static int i = 1;
 
-    @Scheduled(fixedDelay =10000)
+    ///@Scheduled(fixedDelay =10000)
     public void produce(){
         i++;
         System.out.println("Counter : "+i);
