@@ -9,7 +9,32 @@ public class TransportData {
     private int count;
     private int price;
 
+    public TransportData() {
+        this.title = "";
+        this.author = "";
+        this.count = 0;
+        this.price = 0;
+    }
 
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    public void setGenre(String genre) {
+            Genre[] massG = Genre.values();
+            for (Genre g: massG)
+            {
+                if(g.getName() == genre);
+                this.genre = g;
+                break;
+            }
+
+
+    }
 
     public String getTitle() {
         return title;
@@ -37,5 +62,20 @@ public class TransportData {
 
     public void setPrice(String price) {
         this.price = Integer.parseInt(price);
+    }
+
+
+    public boolean isFilled(){
+        if(this.author!=""&&this.title!=""&&this.count!=0&&this.price!=0)
+            return true;
+        else
+            return false;
+    }
+
+    public void clearTransport(){
+        this.title = "";
+        this.author = "";
+        this.count = 0;
+        this.price = 0;
     }
 }

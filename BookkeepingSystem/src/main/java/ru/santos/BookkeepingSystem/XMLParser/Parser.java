@@ -20,17 +20,11 @@ import java.util.ArrayList;
 public class Parser {
 
     private Element elementDoc;
-    private Order order;
-    private TransportData transportData;
 
-    public Parser(int id) {
-        this.order = new Order(id);
-        transportData = new TransportData();
-    }
 
-    public ArrayList<Book> getListBook(){
-        return this.order.getBooks();
-    }
+
+
+
 
 
 
@@ -43,26 +37,20 @@ public class Parser {
         pars(this.elementDoc.getChildNodes());
     }
 
-    private void fillingOrder(String key,String value){
-
-    }
 
 
+    private void fillingOrder(String key,String val){}
 
     private void pars(NodeList nodeList) {
         String doc = "";
         for (int i = 0; i < nodeList.getLength(); i++) {
             if (nodeList.item(i).hasChildNodes()) {
-
                 pars(nodeList.item(i).getChildNodes());
-
             } else {
-                doc += "   " + ((Element) nodeList.item(i).getParentNode()).getTagName().trim() + " : " + nodeList.item(i).getTextContent().trim() + "\n";
-
+                if(((Element) nodeList.item(i).getParentNode()).getTagName() !="book")
+                fillingOrder(nodeList.item(i).getParentNode().getNodeName(),nodeList.item(i).getTextContent().trim());
+                
             }
-
         }
-        System.out.println(doc);
     }
-
 }
