@@ -23,6 +23,9 @@ public class Producer {
     @Autowired
     private RabbitTemplate rabbitTemplate;
 
+    @Autowired
+    private Parser parser;
+
     @Value("${rabbitmq.exchange}")
     private String exchange;
 
@@ -46,16 +49,13 @@ public class Producer {
     public Binding binding(Queue queue,TopicExchange topicExchange){
         return  BindingBuilder.bind(queue).to(topicExchange).with(routingKey);
     }
-    private Parser parser = new Parser();
-    static int i = 1;
+
 
     @Scheduled(fixedDelay =10000)
     public void produce(){
-        i++;
         try {
             parser.parsOrder("D:\\Java\\PractickJava\\SweaterLearnSpringBoot\\src\\main\\resources\\static\\order.xml");
-            ArrayList<Book> list = parser.getListBook();
-            rabbitTemplate.convertAndSend(exchange,routingKey,"asdfasdfasdfasdfasdfasdf");
+            rabbitTemplate.convertAndSend(exchange,routingKey,parser.getStrSend());
         } catch (ParserConfigurationException e) {
             e.printStackTrace();
         } catch (IOException e) {

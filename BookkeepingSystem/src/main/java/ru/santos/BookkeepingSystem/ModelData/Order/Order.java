@@ -1,13 +1,15 @@
 package ru.santos.BookkeepingSystem.ModelData.Order;
 
-import java.util.ArrayList;
+import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
+@Component
 public class Order {
     private int id;
     private ArrayList<Book> books;
 
-    public Order(int id) {
-        this.id = id;
+    public Order() {
+        this.id = 1;
         this.books = new ArrayList<>();
     }
 

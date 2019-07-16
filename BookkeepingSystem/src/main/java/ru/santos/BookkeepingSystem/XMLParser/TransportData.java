@@ -1,7 +1,8 @@
 package ru.santos.BookkeepingSystem.XMLParser;
 
+import org.springframework.stereotype.Component;
 import ru.santos.BookkeepingSystem.ModelData.Order.Genre;
-
+@Component
 public class TransportData {
     private String title;
     private String author;
