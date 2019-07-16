@@ -33,14 +33,14 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
-        </dependency>-->
+        </dependency> -->
 
         <!-- https://mvnrepository.com/artifact/org.postgresql/postgresql
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
             <version>9.4-1206-jdbc42</version>
-        </dependency>-->
+        </dependency> -->
         <!-- https://mvnrepository.com/artifact/org.flywaydb/flyway-core
         <dependency>
             <groupId>org.flywaydb</groupId>
@@ -49,11 +49,11 @@
         </dependency> -->
 
 
-        <!-- security-->
+        <!-- security
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
-        </dependency>
+        </dependency>-->
 
         <!--RabbitMQ-->
         <dependency>

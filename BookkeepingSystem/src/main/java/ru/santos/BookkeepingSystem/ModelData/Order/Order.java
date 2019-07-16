@@ -2,15 +2,21 @@ package ru.santos.BookkeepingSystem.ModelData.Order;
 
 import org.springframework.stereotype.Component;
 
+//import javax.persistence.Entity;
+//import javax.persistence.GeneratedValue;
+//import javax.persistence.GenerationType;
+//import javax.persistence.Id;
 import java.util.ArrayList;
 @Component
+//@Entity
 public class Order {
-    private int id;
+  //  @Id
+   // @GeneratedValue(strategy=GenerationType.AUTO)
+    private Integer id;
     private ArrayList<Book> books;
 
     public Order() {
-        this.id = 1;
-        this.books = new ArrayList<>();
+       this.books = new ArrayList<>();
     }
 
     public int getId() {
