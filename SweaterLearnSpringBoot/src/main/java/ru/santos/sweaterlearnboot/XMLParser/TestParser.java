@@ -6,7 +6,7 @@ import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
 
 public class TestParser {
-    public static void main(String[] args) {
+/*    public static void main(String[] args) {
         Parser parser = new Parser();
         try {
             parser.parsOrder("D:\\Java\\PractickJava\\SweaterLearnSpringBoot\\src\\main\\resources\\static\\order.xml");
@@ -17,5 +17,5 @@ public class TestParser {
         } catch (SAXException e) {
             e.printStackTrace();
         }
-    }
+    }*/
 }
