@@ -2,45 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9d7592d0-deff-4cb0-b271-0f26c6e2fcdc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/santos/BookkeepingSystem/ModelData/User/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/santos/BookkeepingSystem/ModelData/User/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/santos/BookkeepingSystem/config/MailConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/santos/BookkeepingSystem/config/MvcConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/santos/BookkeepingSystem/config/WebSecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/santos/BookkeepingSystem/controller/ControllerUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/santos/BookkeepingSystem/controller/RegistrationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/santos/BookkeepingSystem/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/santos/BookkeepingSystem/repos/BookRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/santos/BookkeepingSystem/repos/UserRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/santos/BookkeepingSystem/service/MailSender.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/santos/BookkeepingSystem/service/ServiceDB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/santos/BookkeepingSystem/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/login.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/login.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/security.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/profile.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/registration.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/userEdit.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/userList.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/navbar.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/santos/BookkeepingSystem/ModelData/Order/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/santos/BookkeepingSystem/ModelData/Order/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/santos/BookkeepingSystem/ModelData/Order/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/santos/BookkeepingSystem/ModelData/Order/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/santos/BookkeepingSystem/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/santos/BookkeepingSystem/controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/santos/BookkeepingSystem/queueManager/Consumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/santos/BookkeepingSystem/queueManager/Consumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/santos/BookkeepingSystem/queueManager/Producer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/santos/BookkeepingSystem/queueManager/Producer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/santos/BookkeepingSystem/repos/OrderRepo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/santos/BookkeepingSystem/ModelData/User/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/santos/BookkeepingSystem/ModelData/User/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/santos/BookkeepingSystem/controller/RegistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/santos/BookkeepingSystem/controller/RegistrationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/common.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/common.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/store.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/store.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/santos/BookkeepingSystem/ModelData/Order/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/santos/BookkeepingSystem/ModelData/Order/Book.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/santos/BookkeepingSystem/ModelData/Order/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/santos/BookkeepingSystem/ModelData/Order/Order.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/santos/BookkeepingSystem/controller/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/santos/BookkeepingSystem/controller/MainController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/santos/BookkeepingSystem/queueManager/Consumer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/santos/BookkeepingSystem/queueManager/Consumer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/santos/BookkeepingSystem/queueManager/Producer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/santos/BookkeepingSystem/queueManager/Producer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/welcome.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/welcome.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/santos/BookkeepingSystem/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/santos/BookkeepingSystem/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/parts/common.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/parts/common.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/store.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/store.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/welcome.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/welcome.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SweaterLearnSpringBoot/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SweaterLearnSpringBoot/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SweaterLearnSpringBoot/src/main/java/ru/santos/sweaterlearnboot/XMLParser/TestParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SweaterLearnSpringBoot/src/main/java/ru/santos/sweaterlearnboot/XMLParser/TestParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SweaterLearnSpringBoot/src/main/java/ru/santos/sweaterlearnboot/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SweaterLearnSpringBoot/src/main/java/ru/santos/sweaterlearnboot/config/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SweaterLearnSpringBoot/src/main/java/ru/santos/sweaterlearnboot/controller/RegistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SweaterLearnSpringBoot/src/main/java/ru/santos/sweaterlearnboot/controller/RegistrationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SweaterLearnSpringBoot/src/main/java/ru/santos/sweaterlearnboot/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SweaterLearnSpringBoot/src/main/java/ru/santos/sweaterlearnboot/domain/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SweaterLearnSpringBoot/src/main/resources/templates/login.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/../SweaterLearnSpringBoot/src/main/resources/templates/login.ftl" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -55,7 +34,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/santos/BookkeepingSystem/controller/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
+            <state relative-caret-position="-236">
               <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -65,19 +44,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/welcome.ftl">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ru/santos/BookkeepingSystem/config/WebSecurityConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ru/santos/BookkeepingSystem/config/MailConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1140">
-              <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
+            <state relative-caret-position="69">
+              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -86,19 +56,34 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/login.ftl">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/navbar.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="694">
-              <caret line="73" column="9" selection-start-line="73" selection-start-column="9" selection-end-line="73" selection-end-column="9" />
+            <state relative-caret-position="240">
+              <caret line="12" column="17" selection-start-line="10" selection-start-column="12" selection-end-line="12" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/security.ftl">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ru/santos/BookkeepingSystem/ModelData/User/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+            <state relative-caret-position="534">
+              <caret line="127" column="4" selection-start-line="127" selection-start-column="4" selection-end-line="127" selection-end-column="4" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ru/santos/BookkeepingSystem/controller/RegistrationController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="754">
+              <caret line="51" column="5" lean-forward="true" selection-start-line="29" selection-start-column="4" selection-end-line="51" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -106,8 +91,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/login.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+            <state relative-caret-position="180">
+              <caret line="9" selection-start-line="9" selection-end-line="13" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -116,7 +101,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/profile.ftl">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="200">
-              <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+              <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -142,8 +127,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/userList.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="24" column="4" lean-forward="true" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
+            <state relative-caret-position="480">
+              <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -173,7 +158,6 @@
         <option value="$PROJECT_DIR$/src/main/java/ru/santos/BookkeepingSystem/XMLParser/TestParser.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/santos/BookkeepingSystem/XMLParser/TransportData.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/santos/BookkeepingSystem/XMLParser/ParserToObject.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/parts/common.ftl" />
         <option value="$PROJECT_DIR$/src/main/java/ru/santos/BookkeepingSystem/ModelData/Order/Order.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/santos/BookkeepingSystem/repos/OrderRepo.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/santos/BookkeepingSystem/ModelData/Order/Book.java" />
@@ -183,30 +167,32 @@
         <option value="$PROJECT_DIR$/src/main/java/ru/santos/BookkeepingSystem/queueManager/Consumer.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/welcom.ftl" />
         <option value="$PROJECT_DIR$/src/main/java/ru/santos/BookkeepingSystem/controller/MainController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/welcome.ftl" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/store.ftl" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/ru/santos/BookkeepingSystem/config/MvcConfig.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/ru/santos/BookkeepingSystem/service/ServiceDB.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/santos/BookkeepingSystem/ModelData/User/Role.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/santos/BookkeepingSystem/ModelData/User/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/santos/BookkeepingSystem/service/MailSender.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/santos/BookkeepingSystem/repos/UserRepo.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/santos/BookkeepingSystem/service/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/santos/BookkeepingSystem/config/WebSecurityConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/santos/BookkeepingSystem/controller/ControllerUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/santos/BookkeepingSystem/controller/RegistrationController.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/santos/BookkeepingSystem/config/MailConfig.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/parts/login.ftl" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/parts/security.ftl" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/login.ftl.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/login.ftl" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/profile.ftl" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/registration.ftl" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/userEdit.ftl" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/userList.ftl" />
         <option value="$PROJECT_DIR$/src/main/java/ru/santos/BookkeepingSystem/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/parts/common.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/welcome.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/store.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/parts/navbar.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/santos/BookkeepingSystem/ModelData/User/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/santos/BookkeepingSystem/controller/RegistrationController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/login.ftl" />
       </list>
     </option>
   </component>
@@ -240,8 +226,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -355,15 +339,26 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="BookkeepingSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BookkeepingSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="parts" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1563346653474" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1563354135752" />
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/JobHours.class" />
   </component>
   <component name="RecentsManager">
@@ -440,7 +435,7 @@
     <layout>
       <window_info id="Designer" order="0" />
       <window_info id="Image Layers" order="1" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.26639894" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.26974565" />
       <window_info id="DB Browser" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Project Explorer" order="5" weight="0.3299866" />
@@ -450,7 +445,7 @@
       <window_info id="Structure" order="9" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32992327" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32992327" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39897698" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -589,9 +584,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
           <caret line="33" selection-start-line="33" selection-end-line="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -724,20 +716,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/santos/BookkeepingSystem/config.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/store.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="21" column="10" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/santos/BookkeepingSystem/config.java" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -752,13 +731,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/common.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -778,20 +750,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/santos/BookkeepingSystem/ModelData/User/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="24" column="28" lean-forward="true" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3233#3234#0" expanded="true" />
-            <element signature="e#3262#3263#0" expanded="true" />
-            <element signature="e#3310#3311#0" expanded="true" />
-            <element signature="e#3346#3347#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/santos/BookkeepingSystem/service/MailSender.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
@@ -802,16 +760,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/santos/BookkeepingSystem/repos/BookRopository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="29" column="2" selection-start-line="29" selection-start-column="2" selection-end-line="29" selection-end-column="2" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/santos/BookkeepingSystem/repos/BookRopository.java" />
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
@@ -839,27 +788,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/santos/BookkeepingSystem/config/WebSecurityConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/santos/BookkeepingSystem/controller/ControllerUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
           <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/santos/BookkeepingSystem/controller/RegistrationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="27" column="34" lean-forward="true" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -890,17 +822,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/login.ftl">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/welcome.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+        <state relative-caret-position="80">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/store.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/common.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/profile.ftl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
-          <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -920,14 +866,48 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/userList.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="24" column="4" lean-forward="true" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
+        <state relative-caret-position="480">
+          <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/navbar.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="12" column="17" selection-start-line="10" selection-start-column="12" selection-end-line="12" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/santos/BookkeepingSystem/ModelData/User/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="534">
+          <caret line="127" column="4" selection-start-line="127" selection-start-column="4" selection-end-line="127" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/login.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="9" selection-start-line="9" selection-end-line="13" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/santos/BookkeepingSystem/controller/RegistrationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="754">
+          <caret line="51" column="5" lean-forward="true" selection-start-line="29" selection-start-column="4" selection-end-line="51" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/santos/BookkeepingSystem/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
+        <state relative-caret-position="-236">
           <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -935,10 +915,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/welcome.ftl">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/santos/BookkeepingSystem/config/WebSecurityConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
+        <state relative-caret-position="69">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

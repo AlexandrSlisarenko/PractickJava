@@ -19,5 +19,4 @@
         <p>No messages</p>
     </#list>
 </div>
-<a href="/">Номе</a>
 </@baseContainer.page>
