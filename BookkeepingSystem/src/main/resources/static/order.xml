@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<order>
+    <book>
+        <title>Алгоритмы. Руководство по разработке</title>
+        <author>Стивен Скиен</author>
+        <count>10</count>
+        <genre>технический</genre>
+        <price>1000</price>
+    </book>
+    <book>
+        <title>Структуры данных и алгоритмы</title>
+        <author>Никалаус Вирт</author>
+        <count>10</count>
+        <genre>технический</genre>
+        <price>1000</price>
+    </book>
+    <book>
+        <title>Исскуство программирования</title>
+        <author>Дональд Кнут  </author>
+        <count>10</count>
+        <genre>технический</genre>
+        <price>1000</price>
+    </book>
+</order>

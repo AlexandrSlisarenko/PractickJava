@@ -11,12 +11,10 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 import org.xml.sax.SAXException;
-import ru.santos.BookkeepingSystem.ModelData.Order.Book;
 import ru.santos.BookkeepingSystem.XMLParser.Parser;
 
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
-import java.util.ArrayList;
 
 @Component
 public class Producer {
@@ -51,7 +49,7 @@ public class Producer {
     }
 
 
-    @Scheduled(fixedDelay =10000)
+    @Scheduled(fixedDelay =360000)
     public void produce(){
         try {
             parser.parsOrder("D:\\Java\\PractickJava\\SweaterLearnSpringBoot\\src\\main\\resources\\static\\order.xml");
