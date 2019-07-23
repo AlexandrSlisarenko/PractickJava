@@ -39,10 +39,13 @@ public class MainController {
     }
 
     @GetMapping("/main")
-    public String main(Map<String,Object>model){
+    public String main(
+            @AuthenticationPrincipal User currentUser,
+            Map<String,Object>model){
         //вывод сообщений
         Iterable<Message> messages = messageRepo.findAll();
         model.put("messages", messages);
+        model.put("currentUserId", currentUser.getId());
         return "main";
     }
     @PostMapping("/main")
@@ -55,11 +58,11 @@ public class MainController {
             ) throws IOException
     {
         message.setAuthor(user);
-        if(bindingResult.hasErrors()){
-            Map<String, String> errorMap = ControllerUtils.getErrors(bindingResult);
-            model.mergeAttributes(errorMap);
-            model.addAttribute("message",message);
-        }else {
+       // if(bindingResult.hasErrors()){
+         //   Map<String, String> errorMap = ControllerUtils.getErrors(bindingResult);
+          //  model.mergeAttributes(errorMap);
+          //  model.addAttribute("message",message);
+       // }else {
             if (file != null && !file.getOriginalFilename().isEmpty()) {
                 File uploadDir = new File(uploadPath);
                 if (!uploadDir.exists()) {
@@ -70,9 +73,10 @@ public class MainController {
                 file.transferTo(new File(uploadPath + "/" + resName));
                 message.setFile(resName);
             }
-            model.addAttribute("message", null);
+
             messageRepo.save(message);
-        }
+            model.addAttribute("message", message);
+        //}
         //вывод сообщений
         Iterable<Message> messages = messageRepo.findAll();
         model.addAttribute("messages", messages);

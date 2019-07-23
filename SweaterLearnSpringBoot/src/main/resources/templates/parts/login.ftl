@@ -30,7 +30,7 @@
     <div class="form-group row">
         <label class="col-sm-2 col-form-label">Password</label>
         <div class="col-sm-5">
-            <input type="password2" name="password2"
+            <input type="password" name="password2"
                    class="form-control ${(password2Error??)?string('is-invalid','')}"
                    placeholder="Retype yore password"/>
             <#if password2Error??>

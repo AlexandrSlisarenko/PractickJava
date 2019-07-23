@@ -27,6 +27,7 @@ public class RegistrationController {
         return "registration";
     }
 
+    @PostMapping("/registration")
     public String addUser(@Valid User user,
                           @RequestParam("password2") String passwordConfirm,
                           BindingResult bindingResult,
