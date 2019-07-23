@@ -11,10 +11,11 @@
             <li class="nav-item">
                 <a class="nav-link" href="/">Home</a>
             </li>
+            <#if isAdmin>
             <li class="nav-item">
                 <a class="nav-link" href="/store">Store</a>
             </li>
-            <#if isAdmin>
+
             <li class="nav-item">
                 <a class="nav-link" href="/user">Users List</a>
             </li>
