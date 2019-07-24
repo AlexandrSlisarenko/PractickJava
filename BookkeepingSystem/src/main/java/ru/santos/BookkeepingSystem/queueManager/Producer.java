@@ -49,7 +49,7 @@ public class Producer {
     }
 
 
-    @Scheduled(fixedDelay =360000)
+    //@Scheduled(fixedDelay =360000)
     public void produce(){
         try {
             parser.parsOrder("D:\\Java\\PractickJava\\SweaterLearnSpringBoot\\src\\main\\resources\\static\\order.xml");
