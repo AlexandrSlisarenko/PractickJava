@@ -40,6 +40,9 @@ public class User implements UserDetails {
     @Enumerated(EnumType.STRING)
     private Set<Genre> genres;
 
+    @Column(nullable = true, columnDefinition="Decimal(10,2) default '100.00'")
+    private int many = 0;
+
     public boolean isAdmin(){
         return roles.contains(Role.ADMIN);
     }
@@ -131,5 +134,12 @@ public class User implements UserDetails {
 
     public void setGenres(Set<Genre> genres) {
         this.genres = genres;
+    }
+    public int getMany() {
+        return many;
+    }
+
+    public void setMany(int many) {
+        this.many = many;
     }
 }

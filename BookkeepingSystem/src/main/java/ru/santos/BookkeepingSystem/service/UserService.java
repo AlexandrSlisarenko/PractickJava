@@ -7,8 +7,12 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
+import ru.santos.BookkeepingSystem.ModelData.Order.Book;
+import ru.santos.BookkeepingSystem.ModelData.User.Liked;
 import ru.santos.BookkeepingSystem.ModelData.User.Role;
 import ru.santos.BookkeepingSystem.ModelData.User.User;
+import ru.santos.BookkeepingSystem.repos.BookRepo;
+import ru.santos.BookkeepingSystem.repos.LikedRepo;
 import ru.santos.BookkeepingSystem.repos.UserRepo;
 
 import java.util.*;
@@ -22,6 +26,10 @@ public class UserService implements UserDetailsService {
     private MailSender mailSender;
     @Autowired
     private PasswordEncoder passwordEncoder;
+    @Autowired
+    private LikedRepo likedRepo;
+    @Autowired
+    private BookRepo bookRepo;
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
@@ -115,4 +123,29 @@ public class UserService implements UserDetailsService {
         }
     }
 
+    public ArrayList<Book> getLikedBooks(Long id) {
+        ArrayList<Book> res = new ArrayList<>();
+        List<Liked> likedlist = likedRepo.findByUserId(id);
+        for (int i = 0; i < likedlist.size(); i++) {
+            res.add(bookRepo.findById(likedlist.get(i).getBook_id()).get());
+        }
+        return res;
+    }
+
+    public void saveLikedBook(Integer bookId, Long id) {
+        List<Liked> like = likedRepo.findByUserIdAndBookId(id, bookId);
+        if(like.size() == 0){
+            Liked nLike = new Liked();
+            nLike.setBookId(bookId);
+            nLike.setUserId(id);
+            likedRepo.save(nLike);
+        }
+    }
+
+    public void deleteLikedBook(Integer bookId, Long id) {
+        List<Liked> delLike = likedRepo.findByUserIdAndBookId(id, bookId);
+        for (int i = 0; i < delLike.size(); i++) {
+            likedRepo.delete(delLike.get(i));
+        }
+    }
 }

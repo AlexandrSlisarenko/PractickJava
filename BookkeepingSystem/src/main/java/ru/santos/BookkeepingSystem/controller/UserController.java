@@ -6,10 +6,12 @@ import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import ru.santos.BookkeepingSystem.ModelData.Order.Book;
 import ru.santos.BookkeepingSystem.ModelData.User.Role;
 import ru.santos.BookkeepingSystem.ModelData.User.User;
 import ru.santos.BookkeepingSystem.service.UserService;
 
+import java.util.ArrayList;
 import java.util.Map;
 
 @Controller
@@ -49,6 +51,7 @@ public class UserController {
         model.addAttribute("email", user.getEmail());
         model.addAttribute("password", user.getPassword());
         model.addAttribute("username", user.getUsername()   );
+        model.addAttribute("many", user.getMany());
         return "profile";
     }
 
@@ -60,6 +63,31 @@ public class UserController {
     ){
         userService.updateProfile(email, password, user);
         return "redirect:/user/profile";
+    }
+
+    @GetMapping("likedList")
+    public String likedView(Model model, @AuthenticationPrincipal User user){
+        ArrayList<Book> likesBooks = userService.getLikedBooks(user.getId());
+        model.addAttribute("books", likesBooks);
+        model.addAttribute("addDel",false);
+        return "liked";
+    }
+    @GetMapping("liked")
+    public String likedBookAdd(
+            @AuthenticationPrincipal User user,
+            @RequestParam (required = false ) Integer bookId
+            ){
+
+        userService.saveLikedBook(bookId, user.getId());
+        return "redirect:/";
+    }
+    @GetMapping("delliked")
+    public String dellikedBookAdd(
+            @AuthenticationPrincipal User user,
+            @RequestParam (required = false ) Integer bookId
+            ){
+        userService.deleteLikedBook(bookId, user.getId());
+        return "redirect:/user/likedList";
     }
 
 

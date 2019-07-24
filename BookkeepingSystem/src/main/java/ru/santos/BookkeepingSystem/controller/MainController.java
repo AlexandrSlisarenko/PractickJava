@@ -26,6 +26,7 @@ public class MainController {
         model.put("authors", authors);
         model.put("genres", Genre.values());
         model.put("path", "/");
+        model.put("addDel",true);
         return "welcome";
     }
 
@@ -44,6 +45,7 @@ public class MainController {
         model.put("authors", authors);
         model.put("genres", Genre.values());
         model.put("path", "/");
+        model.put("addDel",true);
         return "welcome";
     }
 

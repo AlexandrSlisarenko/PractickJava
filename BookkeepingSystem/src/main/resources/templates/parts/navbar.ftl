@@ -12,19 +12,22 @@
                 <a class="nav-link" href="/">Home</a>
             </li>
             <#if isAdmin>
-            <li class="nav-item">
-                <a class="nav-link" href="/store">Store</a>
-            </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/store">Store</a>
+                </li>
 
-            <li class="nav-item">
-                <a class="nav-link" href="/user">Users List</a>
-            </li>
-        </#if>
-        <#if user??>
-        <li class="nav-item">
-            <a class="nav-link" href="/user/profile">User profile</a>
-        </li>
-    </#if>
+                <li class="nav-item">
+                    <a class="nav-link" href="/user">Users List</a>
+                </li>
+            </#if>
+            <#if user??>
+                <li class="nav-item">
+                    <a class="nav-link" href="/user/profile">User profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/user/likedList">Liked books</a>
+                </li>
+             </#if>
     </ul>
     <div class="navbar-text">${name}</div>
     <#if isLogin>

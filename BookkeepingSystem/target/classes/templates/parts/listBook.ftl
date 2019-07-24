@@ -1,3 +1,4 @@
+<#include "security.ftl">
 <div class="container">
     <div class="card-columns">
         <#list books as book>
@@ -8,12 +9,20 @@
                 <p class="card-text">${book.genre}</p>
                 <p class="card-text">${book.count}</p>
                 <p class="card-text">${book.price}</p>
+
+                <#if user??>
+                    <#if addDel>
+                        <a class="btn btn-info" href="/user/liked?bookId=${book.id}">LikeBook</a>
+                    <#else>
+                        <a class="btn btn-info" href="/user/delliked?bookId=${book.id}">DelLike</a>
+                    </#if>
+                </#if>
             </div>
 
         </div>
 
         <#else>
-        <p>No messages</p>
+        <p>No books.....</p>
     </#list>
 </div>
 </div>
