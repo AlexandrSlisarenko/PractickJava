@@ -16,6 +16,7 @@
                     <#else>
                         <a class="btn btn-info" href="/user/delliked?bookId=${book.id}">DelLike</a>
                     </#if>
+                    <#include "addToCard.ftl">
                 </#if>
             </div>
 
