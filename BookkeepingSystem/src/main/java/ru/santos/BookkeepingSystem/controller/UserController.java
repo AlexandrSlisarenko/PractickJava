@@ -19,6 +19,7 @@ import java.util.Map;
 public class UserController {
     @Autowired
     private UserService userService;
+
     @PreAuthorize("hasAuthority('ADMIN')")
     @GetMapping
     public String userList(Model model){
@@ -88,6 +89,15 @@ public class UserController {
             ){
         userService.deleteLikedBook(bookId, user.getId());
         return "redirect:/user/likedList";
+    }
+
+    @PostMapping("/profile/addmany")
+    public String addMany(
+            @AuthenticationPrincipal User user,
+            @RequestParam String many
+    ){
+        userService.addMany(user,many);
+        return "redirect:/user/profile";
     }
 
 

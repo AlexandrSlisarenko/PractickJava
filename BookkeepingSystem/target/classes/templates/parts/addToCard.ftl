@@ -1,4 +1,4 @@
-<form action="/addBookToCard"  method="post" class="form-inline">
+<form action="/card/addBookToCard"  method="post" class="form-inline">
     <div class="form-group mb-2">
         <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="Количество:">
     </div>

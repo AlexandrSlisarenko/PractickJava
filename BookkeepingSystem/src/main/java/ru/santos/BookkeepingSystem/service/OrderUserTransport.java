@@ -12,6 +12,7 @@ public class OrderUserTransport {
     private Long idOrder;
     private int priceOrder;
     private List<Book> booksOrder;
+    private List<String> booksIdInOrder;
     private HashMap<String,String> nameAndQuantityBook;
 
 
@@ -45,5 +46,13 @@ public class OrderUserTransport {
 
     public void setNameAndQuantityBook(HashMap<String, String> nameAndQuantityBook) {
         this.nameAndQuantityBook = nameAndQuantityBook;
+    }
+
+    public List<String> getBooksIdInOrder() {
+        return booksIdInOrder;
+    }
+
+    public void setBooksIdInOrder(List<String> booksIdInOrder) {
+        this.booksIdInOrder = booksIdInOrder;
     }
 }

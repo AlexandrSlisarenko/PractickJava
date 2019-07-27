@@ -148,4 +148,9 @@ public class UserService implements UserDetailsService {
             likedRepo.delete(delLike.get(i));
         }
     }
+
+    public void addMany(User user, String many) {
+        user.setMany(Integer.parseInt(many));
+        userRepo.save(user);
+    }
 }

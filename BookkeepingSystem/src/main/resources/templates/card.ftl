@@ -1,6 +1,7 @@
 <#import "parts/common.ftl" as baseContainer>
 <@baseContainer.page>
 <h1>Basket</h1>
+<#if order != -1>
 <div class="container">
     <h3>Order Data</h3>
     <p>Id Order : ${order.idOrder}</p>
@@ -14,14 +15,30 @@
         </tr>
         </thead>
         <body>
+        <#assign i = 0 >
         <#list order.nameAndQuantityBook?keys as key>
         <tr>
             <td scope="row">${key}</td>
-            <td> <input type="text" name="username" value="${order.nameAndQuantityBook[key]}"
-                        class="form-control"
-                        /> </td>
-            <td>YES</td>
+            <td>
+                <form method="post" action="/card/editcount">
+                    <div class="form-row align-items-center">
+                        <div class="col-auto">
+                            <div class="input-group mb-2">
+                                <input type="text" name="quantity" value="${order.nameAndQuantityBook[key]}" class="form-control"/>
+                            </div>
+                        </div>
+
+                        <div class="col-auto">
+                            <input type="hidden" name="_csrf" value="${_csrf.token}" />
+                            <input type="hidden" name="idBookInorder" value="${order.booksIdInOrder[i]}" />
+                            <button type="submit" class="btn btn-primary mb-2">Add</button>
+                        </div>
+                    </div>
+                </form>
+                 </td>
+            <td><a href="/card/delbook?id=${order.booksIdInOrder[i]}">YES</a></td>
         </tr>
+        <#assign i = i + 1>
         </#list>
         </body>
     </table>
@@ -47,6 +64,9 @@
         </#list>
         </body>
     </table>
+    <a href="/card/сheckout?orderId=${order.idOrder}" class="btn btn-primary mb-2">Checkout order!</a>
 </div>
-
+<#else>
+<p>All orders are successfully completed. You can go to <a href="/card/historyorders">the order history page</a>.</p>
+</#if>
 </@baseContainer.page>
