@@ -1,7 +1,7 @@
 <#import "parts/common.ftl" as baseContainer>
 <@baseContainer.page>
 <h1>Basket</h1>
-<#if order != -1>
+<#if orderYES == 1>
 <div class="container">
     <h3>Order Data</h3>
     <p>Id Order : ${order.idOrder}</p>
@@ -67,6 +67,6 @@
     <a href="/card/сheckout?orderId=${order.idOrder}" class="btn btn-primary mb-2">Checkout order!</a>
 </div>
 <#else>
-<p>No order...</p>
+<p>All orders are successfully completed. You can go to <a href="/card/historyorders">the order history page</a>.</p>
 </#if>
 </@baseContainer.page>

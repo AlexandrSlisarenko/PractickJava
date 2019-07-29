@@ -7,12 +7,11 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
+import ru.santos.BookkeepingSystem.ModelData.Card.OrderUser;
 import ru.santos.BookkeepingSystem.ModelData.Order.Book;
 import ru.santos.BookkeepingSystem.ModelData.User.Liked;
 import ru.santos.BookkeepingSystem.ModelData.User.Role;
 import ru.santos.BookkeepingSystem.ModelData.User.User;
-import ru.santos.BookkeepingSystem.repos.BookRepo;
-import ru.santos.BookkeepingSystem.repos.LikedRepo;
 import ru.santos.BookkeepingSystem.repos.UserRepo;
 
 import java.util.*;
@@ -27,9 +26,12 @@ public class UserService implements UserDetailsService {
     @Autowired
     private PasswordEncoder passwordEncoder;
     @Autowired
-    private LikedRepo likedRepo;
+    private LikedService likedService;
     @Autowired
-    private BookRepo bookRepo;
+    private BookService bookService;
+    @Autowired
+    private CardUserService cardUserService;
+
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
@@ -125,32 +127,40 @@ public class UserService implements UserDetailsService {
 
     public ArrayList<Book> getLikedBooks(Long id) {
         ArrayList<Book> res = new ArrayList<>();
-        List<Liked> likedlist = likedRepo.findByUserId(id);
+        List<Liked> likedlist = likedService.findByUserId(id);
         for (int i = 0; i < likedlist.size(); i++) {
-            res.add(bookRepo.findById(likedlist.get(i).getBook_id()).get());
+            res.add(bookService.findBookById(likedlist.get(i).getBook_id()));
         }
         return res;
     }
 
     public void saveLikedBook(Integer bookId, Long id) {
-        List<Liked> like = likedRepo.findByUserIdAndBookId(id, bookId);
+        List<Liked> like = likedService.findByUserIdAndBookId(id, bookId);
         if(like.size() == 0){
             Liked nLike = new Liked();
             nLike.setBookId(bookId);
             nLike.setUserId(id);
-            likedRepo.save(nLike);
+            likedService.saveLike(nLike);
         }
     }
 
     public void deleteLikedBook(Integer bookId, Long id) {
-        List<Liked> delLike = likedRepo.findByUserIdAndBookId(id, bookId);
+        List<Liked> delLike = likedService.findByUserIdAndBookId(id, bookId);
         for (int i = 0; i < delLike.size(); i++) {
-            likedRepo.delete(delLike.get(i));
+            likedService.deleteLike(delLike.get(i));
         }
     }
 
     public void addMany(User user, String many) {
         user.setMany(Integer.parseInt(many));
         userRepo.save(user);
+    }
+
+    public void saveUserInDB(User user) {
+        userRepo.save(user);
+    }
+
+    public HashMap<String, Integer> getLikeGenre(Long id) {
+        return cardUserService.getGenreList(id);
     }
 }

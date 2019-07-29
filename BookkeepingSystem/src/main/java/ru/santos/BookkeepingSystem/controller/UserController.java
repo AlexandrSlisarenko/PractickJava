@@ -12,6 +12,7 @@ import ru.santos.BookkeepingSystem.ModelData.User.User;
 import ru.santos.BookkeepingSystem.service.UserService;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Map;
 
 @Controller
@@ -69,6 +70,8 @@ public class UserController {
     @GetMapping("likedList")
     public String likedView(Model model, @AuthenticationPrincipal User user){
         ArrayList<Book> likesBooks = userService.getLikedBooks(user.getId());
+        HashMap<String, Integer> listGenre = userService.getLikeGenre(user.getId());
+        model.addAttribute("listGenre", listGenre);
         model.addAttribute("books", likesBooks);
         model.addAttribute("addDel",false);
         return "liked";
@@ -99,6 +102,8 @@ public class UserController {
         userService.addMany(user,many);
         return "redirect:/user/profile";
     }
+
+
 
 
 

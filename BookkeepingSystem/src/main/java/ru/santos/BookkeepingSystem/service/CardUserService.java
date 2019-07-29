@@ -25,54 +25,63 @@ public class CardUserService {
     private BooksInOrderUserRepo booksInOrderUserRepo;
 
     @Autowired
-    private BookRepo bookRepo;
+    private  BookService bookService;
 
     @Autowired
-    private UserRepo userRepo;
+    private UserService userService;
+
+    //@Autowired
+    //private UserRepo userRepo;
 
     public void addToCard(Book book, User user, int quantity){
         boolean old = true;
-        OrderUser orderUserNotPaid = orderUserRepo.findByCustomerAndPaid(user.getId(),0);
-        if(orderUserNotPaid == null){
-            orderUserNotPaid = new OrderUser();
-            orderUserNotPaid.setUser(user.getId());
-            orderUserNotPaid.setPaid(0);
-            orderUserNotPaid.setPrice(book.getPrice() * quantity);
-            orderUserRepo.save(orderUserNotPaid);
-            old = false;
-        }
-
-        BooksInOrderUser booksInOrderUserExists = booksInOrderUserRepo.findByOrderUserIdAndBookId(orderUserNotPaid.getId(),book.getId());
-
-        if(booksInOrderUserExists != null){
-            booksInOrderUserExists.setQuantity(booksInOrderUserExists.getQuantity()+quantity);
-            booksInOrderUserRepo.save(booksInOrderUserExists);
-            orderUserNotPaid.setPrice((book.getPrice() * quantity)+orderUserNotPaid.getPrice());
-            orderUserRepo.save(orderUserNotPaid);
-        }else {
-            booksInOrderUserExists = new BooksInOrderUser();
-            booksInOrderUserExists.setQuantity(quantity);
-            booksInOrderUserExists.setBook(book.getId());
-            booksInOrderUserExists.setOrderUser(orderUserNotPaid.getId());
-            booksInOrderUserRepo.save(booksInOrderUserExists);
-            if(old){
-                orderUserNotPaid.setPrice((book.getPrice() * quantity)+orderUserNotPaid.getPrice());
+        OrderUser orderUserNotPaid;
+        List<OrderUser> listOrderUser = orderUserRepo.findByCustomerAndPaid(user.getId(),0);
+            if(listOrderUser.size() == 0) {
+                orderUserNotPaid = new OrderUser();
+                orderUserNotPaid.setUser(user.getId());
+                orderUserNotPaid.setPaid(0);
+                orderUserNotPaid.setPrice(book.getPrice() * quantity);
                 orderUserRepo.save(orderUserNotPaid);
+                old = false;
             }
-        }
+            else orderUserNotPaid = listOrderUser.get(0);
+
+            BooksInOrderUser booksInOrderUserExists = booksInOrderUserRepo.findByOrderUserIdAndBookId(orderUserNotPaid.getId(), book.getId());
+
+            if (booksInOrderUserExists != null) {
+                booksInOrderUserExists.setQuantity(booksInOrderUserExists.getQuantity() + quantity);
+                booksInOrderUserRepo.save(booksInOrderUserExists);
+                orderUserNotPaid.setPrice((book.getPrice() * quantity) + orderUserNotPaid.getPrice());
+                orderUserRepo.save(orderUserNotPaid);
+            } else {
+                booksInOrderUserExists = new BooksInOrderUser();
+                booksInOrderUserExists.setQuantity(quantity);
+                booksInOrderUserExists.setBook(book.getId());
+                booksInOrderUserExists.setOrderUser(orderUserNotPaid.getId());
+                booksInOrderUserRepo.save(booksInOrderUserExists);
+                if (old) {
+                    orderUserNotPaid.setPrice((book.getPrice() * quantity) + orderUserNotPaid.getPrice());
+                    orderUserRepo.save(orderUserNotPaid);
+                }
+            }
 
 
     }
 
     public OrderUserTransport showOrderNotPaidUser(User user){
         OrderUserTransport transport = new OrderUserTransport();
-        OrderUser orderUserNotPaid = orderUserRepo.findByCustomerAndPaid(user.getId(),0);
-        if(orderUserNotPaid != null){
-            transport.setIdOrder(orderUserNotPaid.getId());
-            transport.setPriceOrder(orderUserNotPaid.getPrice());
-            transport.setNameAndQuantityBook(getTitleAndCountBook(booksInOrderUserRepo.findByOrderUserId(orderUserNotPaid.getId())));
-            transport.setBooksOrder(getBooksOrder(booksInOrderUserRepo.findByOrderUserId(orderUserNotPaid.getId())));;
-            transport.setBooksIdInOrder(getBookIdInOrder(booksInOrderUserRepo.findByOrderUserId(orderUserNotPaid.getId())));
+        List<OrderUser> listOrderUser = orderUserRepo.findByCustomerAndPaid(user.getId(),0);
+        if(listOrderUser != null && listOrderUser.size() != 0) {
+            OrderUser orderUserNotPaid = orderUserRepo.findByCustomerAndPaid(user.getId(), 0).get(0);
+            if (orderUserNotPaid != null) {
+                transport.setIdOrder(orderUserNotPaid.getId());
+                transport.setPriceOrder(orderUserNotPaid.getPrice());
+                transport.setNameAndQuantityBook(getTitleAndCountBook(booksInOrderUserRepo.findByOrderUserId(orderUserNotPaid.getId())));
+                transport.setBooksOrder(getBooksOrder(booksInOrderUserRepo.findByOrderUserId(orderUserNotPaid.getId())));
+                ;
+                transport.setBooksIdInOrder(getBookIdInOrder(booksInOrderUserRepo.findByOrderUserId(orderUserNotPaid.getId())));
+            }
         }
         return  transport;
     }
@@ -82,7 +91,7 @@ public class CardUserService {
         HashMap<String,String> res = new HashMap<>();
         for (BooksInOrderUser book: booksInOrderUsers) {
 
-            String title = bookRepo.findById(book.getBook()).get().getTitle();
+            String title = bookService.findBookById(book.getBook()).getTitle();
             res.put(title,book.getQuantity().toString());
 
         }
@@ -100,13 +109,13 @@ public class CardUserService {
     private List<Book> getBooksOrder(List<BooksInOrderUser> booksInOrderUsers){
        List<Book> books = new ArrayList<>();
         for (BooksInOrderUser book: booksInOrderUsers) {
-            books.add(bookRepo.findById(book.getBook()).get());
+            books.add(bookService.findBookById(book.getBook()));
         }
         return books;
     }
 
     public void editCountBookInOrder(BooksInOrderUser bookInOrder, String quantity) {
-        Integer priceBook = bookRepo.findById(bookInOrder.getBook()).get().getPrice();
+        Integer priceBook = bookService.findBookById(bookInOrder.getBook()).getPrice();
         Integer oldCountBooks = bookInOrder.getQuantity();
         OrderUser orderUser = orderUserRepo.getOne(bookInOrder.getOrderUser());
         Integer newPrice = orderUser.getPrice()-(priceBook*oldCountBooks);
@@ -117,21 +126,81 @@ public class CardUserService {
     }
 
     public void deletBookOfOrder(BooksInOrderUser bookInOrder) {
-        Integer priceBook = bookRepo.findById(bookInOrder.getBook()).get().getPrice();
+        Integer priceBook = bookService.findBookById(bookInOrder.getBook()).getPrice();
         Integer oldCountBooks = bookInOrder.getQuantity();
         OrderUser orderUser = orderUserRepo.getOne(bookInOrder.getOrderUser());
         Integer newPrice = orderUser.getPrice()-(priceBook*oldCountBooks);
-        orderUser.setPrice(newPrice);
-        orderUserRepo.save(orderUser);
         booksInOrderUserRepo.delete(bookInOrder);
+        if(newPrice > 0) {
+            orderUser.setPrice(newPrice);
+            orderUserRepo.save(orderUser);
+        }else{
+            orderUserRepo.delete(orderUser);
+        }
     }
 
     public void сheckoutOrder(OrderUser order, User user) {
-        if(user.getMany() > order.getPrice()){
+        if(user.getMany() > order.getPrice() && checkCountBook(order.getId())){
             user.setMany(user.getMany() - order.getPrice());
-            userRepo.save(user);
+            userService.saveUserInDB(user);
+            issuanceOfBooks(order.getId());
             order.setPaid(1);
             orderUserRepo.save(order);
         }
+    }
+
+    private boolean checkCountBook(Long orderId){
+        List<BooksInOrderUser> listBooks = booksInOrderUserRepo.findByOrderUserId(orderId);
+        for (BooksInOrderUser bookOfOrder: listBooks) {
+            if(bookOfOrder.getQuantity() > bookService.findBookById(bookOfOrder.getBook()).getCount()){
+                return false;
+            }
+
+        }
+        return true;
+    }
+    private void issuanceOfBooks(Long orderId){
+        List<BooksInOrderUser> listBooks = booksInOrderUserRepo.findByOrderUserId(orderId);
+        for (BooksInOrderUser bookOfOrder: listBooks) {
+            Book book = bookService.findBookById(bookOfOrder.getBook());
+            book.setCount(book.getCount() - bookOfOrder.getQuantity());
+            bookService.saveBook(book);
+        }
+
+    }
+
+    public List<OrderUserTransport> getHistoryOrders(Long userId){
+        List<OrderUserTransport> listOrder = new ArrayList<>();
+        List<OrderUser> orderUserPaid = orderUserRepo.findByCustomerAndPaid(userId,1);
+        for (int i = 0; i < orderUserPaid.size(); i++) {
+            OrderUserTransport transport = new OrderUserTransport();
+            transport.setPriceOrder(orderUserPaid.get(i).getPrice());
+            transport.setIdOrder(orderUserPaid.get(i).getId());
+            List<BooksInOrderUser> listBook = booksInOrderUserRepo.findByOrderUserId(orderUserPaid.get(i).getId());
+            transport.setNameAndQuantityBook(getTitleAndCountBook(listBook));
+            listOrder.add(transport);
+        }
+        return  listOrder;
+    }
+
+    public boolean testCleanBasket(OrderUser orderUser) {
+        List<OrderUser> listOrderUser = orderUserRepo.findByCustomerAndPaid(orderUser.getUser(),0);
+        if(listOrderUser.size() != 0)
+            return false;
+        else{
+            orderUser.setPaid(0);
+            orderUserRepo.save(orderUser);
+            return true;
+        }
+    }
+
+
+    public HashMap<String, Integer> getGenreList(Long id) {
+        HashMap<String, Integer> result = new HashMap<>();
+        List<OrderUser> listOrder = orderUserRepo.findByCustomerAndPaid(id,1);
+        for (int i = 0; i < listOrder.size(); i++) {
+            List<BooksInOrderUser>listBooksOrder = booksInOrderUserRepo.findByOrderUserId(listOrder.get(i).getId());
+        }
+        return result;
     }
 }

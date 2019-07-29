@@ -1,7 +1,7 @@
 package ru.santos.BookkeepingSystem.ModelData.Order;
 
 public enum Genre {
-    TECHNICAL("технический"),;
+    TECHNICAL("технический"),SPRING("Spring"),JSON_REST_HTTP("http/Рест/JSON"),FRONTEND("FrontEnd");
 
     private String name;
 

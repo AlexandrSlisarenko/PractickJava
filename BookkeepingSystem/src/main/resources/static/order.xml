@@ -16,7 +16,7 @@
     </book>
     <book>
         <title>Исскуство программирования</title>
-        <author>Дональд Кнут  </author>
+        <author>Дональд Кнут</author>
         <count>10</count>
         <genre>технический</genre>
         <price>1000</price>

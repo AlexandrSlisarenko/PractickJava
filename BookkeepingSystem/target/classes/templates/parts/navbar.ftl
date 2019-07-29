@@ -26,8 +26,12 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/user/likedList">Liked books</a>
-                </li><li class="nav-item">
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="/card">Card</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/card/historyorders">History orders</a>
                 </li>
              </#if>
     </ul>

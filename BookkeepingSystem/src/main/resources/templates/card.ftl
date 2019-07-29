@@ -1,7 +1,7 @@
 <#import "parts/common.ftl" as baseContainer>
 <@baseContainer.page>
 <h1>Basket</h1>
-<#if order != -1>
+<#if orderYES == 1>
 <div class="container">
     <h3>Order Data</h3>
     <p>Id Order : ${order.idOrder}</p>
