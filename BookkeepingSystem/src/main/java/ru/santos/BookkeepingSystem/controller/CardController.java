@@ -34,7 +34,10 @@ public class CardController {
             @RequestParam("bookId") Book book,
             HttpServletRequest request
     ){
-        cardUserService.addToCard(book,user,Integer.parseInt(quantity));
+        if(cardUserService.checkForFreeBooks(book,user,Integer.parseInt(quantity)))
+            cardUserService.addToCard(book,user,Integer.parseInt(quantity));
+        else
+            cardUserService.orderToSuppliers(book.getTitle(), book.getAuthor(), "10");
         return "redirect:" + request.getHeader("referer");
     }
 

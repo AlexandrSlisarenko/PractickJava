@@ -10,4 +10,6 @@ import java.util.List;
 public interface OrderUserRepo extends JpaRepository<OrderUser,Long> {
 
     List<OrderUser> findByCustomerAndPaid(Long user, Integer paid);
+
+    List<OrderUser> findByPaidAndCustomerNot(Integer i, Long id);
 }

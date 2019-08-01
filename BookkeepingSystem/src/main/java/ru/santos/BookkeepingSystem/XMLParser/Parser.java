@@ -44,6 +44,7 @@ public class Parser {
         pars(this.elementDoc.getChildNodes());
 
     }
+
     private String getData(){
         Date date = new Date();
         String res = date.toString();
@@ -51,6 +52,7 @@ public class Parser {
         res = res.replaceAll(":","_");
         return res;
     }
+
     public String createOrderFinishedBook(String title, String author, String count) throws ParserConfigurationException, IOException, SAXException {
         String result = "";
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
@@ -67,8 +69,7 @@ public class Parser {
             //tr.setOutputProperty(OutputKeys.DOCTYPE_SYSTEM, "roles.dtd");
             tr.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "4");
 
-            // send DOM to file
-            result = "D:\\Java\\PractickJava\\BookkeepingSystem\\src\\main\\resources\\static\\newOrderBook"+title+"_"+getData()+".xml";
+            result = "D:\\Java\\PractickJava\\BookkeepingSystem\\src\\main\\resources\\static\\ordersBooksSystems\\newOrderBook"+title+"_"+getData()+".xml";
             tr.transform(new DOMSource(document),
                     new StreamResult(new FileOutputStream(result)));
 

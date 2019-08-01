@@ -6,6 +6,7 @@ import ru.santos.BookkeepingSystem.ModelData.Card.BooksInOrderUser;
 import ru.santos.BookkeepingSystem.ModelData.Card.OrderUser;
 import ru.santos.BookkeepingSystem.ModelData.Order.Book;
 import ru.santos.BookkeepingSystem.ModelData.User.User;
+import ru.santos.BookkeepingSystem.queueManager.Manager;
 import ru.santos.BookkeepingSystem.repos.BookRepo;
 import ru.santos.BookkeepingSystem.repos.Card.BooksInOrderUserRepo;
 import ru.santos.BookkeepingSystem.repos.Card.OrderUserRepo;
@@ -29,6 +30,9 @@ public class CardUserService {
 
     @Autowired
     private UserService userService;
+
+    @Autowired
+    private Manager manager;
 
     //@Autowired
     //private UserRepo userRepo;
@@ -68,6 +72,7 @@ public class CardUserService {
 
 
     }
+
 
     public OrderUserTransport showOrderNotPaidUser(User user){
         OrderUserTransport transport = new OrderUserTransport();
@@ -212,5 +217,35 @@ public class CardUserService {
            result = compareGenre(booksInOrderUserRepo.findByOrderUserId(listOrder.get(i).getId()),result);
         }
         return result;
+    }
+
+
+    public boolean checkForFreeBooks(Book book, User user, int quantity){
+        if(quantity < maxFreeBooks(book, user))
+           return true;
+        else
+            return false;
+    }
+
+    public int maxFreeBooks(Book book, User user){
+        int quantityBookInStore = book.getCount();
+        int quantityBookInBasketOtherUser = getQuantityBookInBasketOtherUser(user, book.getId());
+        return quantityBookInStore - quantityBookInBasketOtherUser;
+    }
+
+    private int getQuantityBookInBasketOtherUser(User user, Integer bookId) {
+        int result = 0;
+        List<OrderUser> listOrderUser = orderUserRepo.findByPaidAndCustomerNot(0,user.getId());
+        for (int i = 0; i < listOrderUser.size(); i++) {
+            List<BooksInOrderUser> listBooks = booksInOrderUserRepo.findByOrderUserId(listOrderUser.get(i).getId());
+            for (int j = 0; j < listBooks.size(); j++) {
+                 if(listBooks.get(i).getBook() == bookId) result += listBooks.get(i).getQuantity();
+            }
+        }
+        return result;
+    }
+
+    public void orderToSuppliers(String bookId, String author, String quantity){
+        manager.createNewOrder(bookId,author,quantity);
     }
 }
