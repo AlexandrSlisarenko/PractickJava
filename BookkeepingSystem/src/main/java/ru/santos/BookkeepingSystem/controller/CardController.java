@@ -12,12 +12,10 @@ import ru.santos.BookkeepingSystem.ModelData.Card.BooksInOrderUser;
 import ru.santos.BookkeepingSystem.ModelData.Card.OrderUser;
 import ru.santos.BookkeepingSystem.ModelData.Order.Book;
 import ru.santos.BookkeepingSystem.ModelData.User.User;
-import ru.santos.BookkeepingSystem.repos.Card.OrderUserRepo;
 import ru.santos.BookkeepingSystem.service.CardUserService;
 import ru.santos.BookkeepingSystem.service.OrderUserTransport;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.validation.Valid;
 import java.util.List;
 
 @Controller
@@ -58,6 +56,7 @@ public class CardController {
     @PostMapping("/editcount")
     public  String edintCount(
             @RequestParam String quantity,
+            @AuthenticationPrincipal User user,
             @RequestParam("idBookInorder") BooksInOrderUser book
     ){
         cardUserService.editCountBookInOrder(book, quantity);
@@ -77,7 +76,9 @@ public class CardController {
             @RequestParam("orderId") OrderUser order,
             @AuthenticationPrincipal User user
     ){
-        cardUserService.сheckoutOrder(order,user);
+        if(cardUserService.testCheckoutFreeBookInStore(order)) {
+            cardUserService.сheckoutOrder(order, user);
+        }
         return "redirect:/card";
     }
 

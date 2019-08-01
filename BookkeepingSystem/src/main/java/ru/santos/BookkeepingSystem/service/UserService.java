@@ -163,4 +163,8 @@ public class UserService implements UserDetailsService {
     public HashMap<String, Integer> getLikeGenre(Long id) {
         return cardUserService.getGenreList(id);
     }
+
+    public User getUser(Long id){
+        return userRepo.findById(id).get();
+    }
 }

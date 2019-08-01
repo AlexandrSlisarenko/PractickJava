@@ -7,10 +7,8 @@ import ru.santos.BookkeepingSystem.ModelData.Card.OrderUser;
 import ru.santos.BookkeepingSystem.ModelData.Order.Book;
 import ru.santos.BookkeepingSystem.ModelData.User.User;
 import ru.santos.BookkeepingSystem.queueManager.Manager;
-import ru.santos.BookkeepingSystem.repos.BookRepo;
 import ru.santos.BookkeepingSystem.repos.Card.BooksInOrderUserRepo;
 import ru.santos.BookkeepingSystem.repos.Card.OrderUserRepo;
-import ru.santos.BookkeepingSystem.repos.UserRepo;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -34,8 +32,6 @@ public class CardUserService {
     @Autowired
     private Manager manager;
 
-    //@Autowired
-    //private UserRepo userRepo;
 
     public void addToCard(Book book, User user, int quantity){
         boolean old = true;
@@ -120,14 +116,17 @@ public class CardUserService {
     }
 
     public void editCountBookInOrder(BooksInOrderUser bookInOrder, String quantity) {
-        Integer priceBook = bookService.findBookById(bookInOrder.getBook()).getPrice();
-        Integer oldCountBooks = bookInOrder.getQuantity();
-        OrderUser orderUser = orderUserRepo.getOne(bookInOrder.getOrderUser());
-        Integer newPrice = orderUser.getPrice()-(priceBook*oldCountBooks);
-        orderUser.setPrice(newPrice+(priceBook*Integer.parseInt(quantity)));
-        bookInOrder.setQuantity(Integer.parseInt(quantity));
-        orderUserRepo.save(orderUser);
-        booksInOrderUserRepo.save(bookInOrder);
+        int maxFree = maxFreeBooks(bookService.findBookById(bookInOrder.getBook()),userService.getUser(bookInOrder.getOrderUser()));
+        if(maxFree > Integer.parseInt(quantity)) {
+            Integer priceBook = bookService.findBookById(bookInOrder.getBook()).getPrice();
+            Integer oldCountBooks = bookInOrder.getQuantity();
+            OrderUser orderUser = orderUserRepo.getOne(bookInOrder.getOrderUser());
+            Integer newPrice = orderUser.getPrice() - (priceBook * oldCountBooks);
+            orderUser.setPrice(newPrice + (priceBook * Integer.parseInt(quantity)));
+            bookInOrder.setQuantity(Integer.parseInt(quantity));
+            orderUserRepo.save(orderUser);
+            booksInOrderUserRepo.save(bookInOrder);
+        }
     }
 
     public void deletBookOfOrder(BooksInOrderUser bookInOrder) {
@@ -247,5 +246,15 @@ public class CardUserService {
 
     public void orderToSuppliers(String bookId, String author, String quantity){
         manager.createNewOrder(bookId,author,quantity);
+    }
+
+    public boolean testCheckoutFreeBookInStore(OrderUser order){
+        List<BooksInOrderUser> listBook = booksInOrderUserRepo.findByOrderUserId(order.getUser());
+        for (int i = 0; i < listBook.size(); i++) {
+            if(!checkForFreeBooks(bookService.findBookById(listBook.get(i).getBook()),
+                    userService.getUser(listBook.get(i).getOrderUser()),
+                    listBook.get(i).getQuantity())) return false;
+        }
+        return true;
     }
 }
