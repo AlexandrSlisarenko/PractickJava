@@ -1,4 +1,9 @@
 <div class="container">
+    <div class="m-3">
+        <span>Sopt panel: <a class="btn btn-primary" id="sortAlphabet1" href="/sortalphabet">Alphabet</a>
+            <a class="btn btn-primary" id="sortpricedown1" href="/sortpricedown?updown=1">PriceUp</a>
+            <a class="btn btn-primary" id="sortpricedown2" href="/sortpricedown?updown=0">PriceDown</a>
+    </div>
     <form action="${path}" method="post">
         <div class="input-group mb-3">
             <div class="input-group-prepend">

@@ -194,12 +194,22 @@ public class CardUserService {
         }
     }
 
+    private HashMap<String, Integer> compareGenre(List<BooksInOrderUser> listBooksOrder, HashMap<String, Integer> result){
+        for (int j = 0; j < listBooksOrder.size(); j++) {
+            if(result.containsKey(bookService.findBookById(listBooksOrder.get(j).getBook()).getGenre().getName())){
+                result.replace(bookService.findBookById(listBooksOrder.get(j).getBook()).getGenre().getName(),
+                        result.get(bookService.findBookById(listBooksOrder.get(j).getBook()).getGenre().getName())+1);
+            }
+        }
+        return result;
+    }
+
 
     public HashMap<String, Integer> getGenreList(Long id) {
-        HashMap<String, Integer> result = new HashMap<>();
+        HashMap<String, Integer> result = bookService.getListGenre();
         List<OrderUser> listOrder = orderUserRepo.findByCustomerAndPaid(id,1);
         for (int i = 0; i < listOrder.size(); i++) {
-            List<BooksInOrderUser>listBooksOrder = booksInOrderUserRepo.findByOrderUserId(listOrder.get(i).getId());
+           result = compareGenre(booksInOrderUserRepo.findByOrderUserId(listOrder.get(i).getId()),result);
         }
         return result;
     }

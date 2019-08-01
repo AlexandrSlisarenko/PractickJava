@@ -19,4 +19,5 @@
         </#list>
     </div>
 </div>
+<a href="/store/neworder">New Order</a>
 </@baseContainer.page>

@@ -29,9 +29,10 @@ public class TransportData {
             Genre[] massG = Genre.values();
             for (Genre g: massG)
             {
-                if(g.getName() == genre);
-                this.genre = g;
-                break;
+                if(g.getName().equals(genre)) {
+                    this.genre = g;
+                    break;
+                }
             }
 
 
@@ -67,7 +68,7 @@ public class TransportData {
 
 
     public boolean isFilled(){
-        if(this.author!=""&&this.title!=""&&this.count!=0&&this.price!=0)
+        if(this.author!=""&&this.title!=""&&this.count!=0/*&&this.price!=0*/)
             return true;
         else
             return false;

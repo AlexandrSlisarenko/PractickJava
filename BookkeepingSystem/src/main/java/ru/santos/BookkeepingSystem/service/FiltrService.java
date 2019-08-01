@@ -7,6 +7,8 @@ import ru.santos.BookkeepingSystem.repos.AuthorRepo;
 import ru.santos.BookkeepingSystem.repos.BookRepo;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 @Service
 public class FiltrService {
@@ -17,6 +19,8 @@ public class FiltrService {
     private AuthorRepo authorRepo;
 
     private ArrayList<Book> result = new ArrayList<>();
+
+
 
     public BookRepo getBookRepo() {
         return bookRepo;
@@ -82,5 +86,40 @@ public class FiltrService {
         for (Book book: all) {
             if(book.getTitle().toLowerCase().contains(name.toLowerCase())) result.add(book);
         }
+    }
+
+    public ArrayList<Book> sortAlphabet() {
+        ArrayList<Book> res = new ArrayList<>();
+        Iterable<Book> allBooks = bookRepo.findAll();
+        for (Book b:allBooks){res.add(b);}
+        Collections.sort(res, Comparator.comparing(Book::getTitle));
+        return res;
+    }
+    public ArrayList<Book> sortPriceDown(boolean upDown) {
+        ArrayList<Book> res = new ArrayList<>();
+        Iterable<Book> allBooks = bookRepo.findAll();
+        for (Book b:allBooks){res.add(b);}
+        if(upDown)
+            Collections.sort(res, Comparator.comparingInt(Book::getPrice));
+        else {
+            Comparator<Book> pcomp = new PersonAgeComparator();
+            Collections.sort(res, pcomp);
+        }
+        return res;
+    }
+
+
+}
+
+class PersonAgeComparator implements Comparator<Book>{
+
+    public int compare(Book a, Book b){
+
+        if(a.getPrice() < b.getPrice())
+            return 1;
+        else if(a.getPrice() > b.getPrice())
+            return -1;
+        else
+            return 0;
     }
 }

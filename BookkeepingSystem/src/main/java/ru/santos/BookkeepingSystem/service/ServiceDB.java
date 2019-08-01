@@ -65,7 +65,7 @@ public class ServiceDB {
                 if(bookBD.getTitle().equals(list.get(i).getTitle())){
                     ok = false;
                     bookBD.setCount(bookBD.getCount()+list.get(i).getCount());
-                    bookBD.setPrice(list.get(i).getPrice());
+                    if(list.get(i).getPrice() > 0) bookBD.setPrice(list.get(i).getPrice());
                     bookRepo.save(bookBD);
                     saveAuthor(bookBD);
                     break;
@@ -75,6 +75,7 @@ public class ServiceDB {
                 bookRepo.save(list.get(i));
                 saveAuthor(findLastElement(list.get(i)));
             }
+            ok = true;
         }
         list.clear();
     }

@@ -16,9 +16,37 @@
     </book>
     <book>
         <title>Исскуство программирования</title>
-        <author>Дональд Кнут  </author>
+        <author>Дональд Кнут</author>
         <count>10</count>
         <genre>технический</genre>
         <price>1000</price>
+    </book>
+    <book>
+        <title>Java</title>
+        <author>Кей С. Хорстманн </author>
+        <count>10</count>
+        <genre>Java</genre>
+        <price>467</price>
+    </book>
+    <book>
+        <title>Spring in Action</title>
+        <author>Крейг Уоллс</author>
+        <count>10</count>
+        <genre>Spring</genre>
+        <price>857</price>
+    </book>
+    <book>
+        <title>Front-end. Клиентская разработка. Node.js, ES6, REST</title>
+        <author>Аквино К., Ганди Т.</author>
+        <count>10</count>
+        <genre>http/Рест/JSON</genre>
+        <price>1329</price>
+    </book>
+    <book>
+        <title>Angular</title>
+        <author>FrontEnd</author>
+        <count>10</count>
+        <genre>Angular</genre>
+        <price>756</price>
     </book>
 </order>

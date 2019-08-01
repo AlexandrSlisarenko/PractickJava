@@ -49,10 +49,10 @@ public class Producer {
     }
 
 
-    //@Scheduled(fixedDelay =360000)
-    public void produce(){
+
+    public void produce(String path){
         try {
-            parser.parsOrder("D:\\Java\\PractickJava\\SweaterLearnSpringBoot\\src\\main\\resources\\static\\order.xml");
+            parser.parsOrder(path);
             rabbitTemplate.convertAndSend(exchange,routingKey,parser.getStrSend());
         } catch (ParserConfigurationException e) {
             e.printStackTrace();

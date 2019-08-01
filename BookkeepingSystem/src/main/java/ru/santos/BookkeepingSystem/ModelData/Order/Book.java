@@ -17,9 +17,6 @@ public class Book {
     private int count;
     private int price;
 
-    //@OneToMany
-    //private List<BooksInOrderUser> booksInOrderUserList;
-
     public Book(){}
 
     public Book(String title, String author, Genre genre, int count, int price) {
@@ -61,13 +58,7 @@ public class Book {
     public Integer getId() {
         return id;
     }
-/*
-    public List<BooksInOrderUser> getBooksInOrderUserList() {
-        return booksInOrderUserList;
-    }
 
-    public void setBooksInOrderUserList(List<BooksInOrderUser> booksInOrderUserList) {
-        this.booksInOrderUserList = booksInOrderUserList;
-    }
- */
+
+
 }
