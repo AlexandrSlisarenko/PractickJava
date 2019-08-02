@@ -17,9 +17,6 @@ public class OrderUser {
 
     private Integer price;
 
-    //@OneToMany
-   // private List<BooksInOrderUser> booksInOrderUserList;
-
     public Long getUser() {
         return customer;
     }
@@ -32,14 +29,6 @@ public class OrderUser {
         return id;
     }
 
-    /*public List<BooksInOrderUser> getBooksInOrderUserList() {
-        return booksInOrderUserList;
-    }
-
-    public void setBooksInOrderUserList(List<BooksInOrderUser> booksInOrderUserList) {
-        this.booksInOrderUserList = booksInOrderUserList;
-    }
-    */
 
     public Integer isPaid() {
         return paid;

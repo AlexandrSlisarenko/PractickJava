@@ -31,4 +31,8 @@ public class BookService {
         }
         return res;
     }
+
+    public Iterable<Book> getBookAll() {
+        return bookRepo.findAll();
+    }
 }

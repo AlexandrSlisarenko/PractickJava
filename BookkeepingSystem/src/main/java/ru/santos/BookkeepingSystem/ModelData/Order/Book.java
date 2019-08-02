@@ -1,21 +1,22 @@
 package ru.santos.BookkeepingSystem.ModelData.Order;
 
-import ru.santos.BookkeepingSystem.ModelData.Card.BooksInOrderUser;
-
 import javax.persistence.*;
-import java.util.List;
+import java.util.Date;
 
 @Entity
 public class Book {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Integer id;
-
     private String title;
     private String author;
     private Genre genre;
     private int count;
     private int price;
+    @Column(nullable = true, columnDefinition="Boolean default FALSE")
+    private boolean delete;
+    @Column(nullable = true)
+    private Date dataFirstDelivery;
 
     public Book(){}
 
@@ -59,6 +60,19 @@ public class Book {
         return id;
     }
 
+    public boolean isDelete() {
+        return delete;
+    }
 
+    public void setDelete(boolean delete) {
+        this.delete = delete;
+    }
 
+    public Date getDataFirstDelivery() {
+        return dataFirstDelivery;
+    }
+
+    public void setDataFirstDelivery(Date dataFirstDelivery) {
+        this.dataFirstDelivery = dataFirstDelivery;
+    }
 }
