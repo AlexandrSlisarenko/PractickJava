@@ -9,6 +9,7 @@ import ru.santos.BookkeepingSystem.repos.BookRepo;
 
 
 import java.util.ArrayList;
+import java.util.Date;
 
 @Service
 public class ServiceDB {
@@ -72,6 +73,7 @@ public class ServiceDB {
                 }
             }
             if(ok){
+                list.get(i).setDataFirstDelivery(new Date());
                 bookRepo.save(list.get(i));
                 saveAuthor(findLastElement(list.get(i)));
             }

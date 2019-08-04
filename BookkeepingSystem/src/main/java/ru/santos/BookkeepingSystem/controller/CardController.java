@@ -35,7 +35,7 @@ public class CardController {
         if(cardUserService.checkForFreeBooks(book,user,Integer.parseInt(quantity)))
             cardUserService.addToCard(book,user,Integer.parseInt(quantity));
         else
-            cardUserService.orderToSuppliers(book.getTitle(), book.getAuthor(), "10");
+            cardUserService.orderToSuppliers(book, "10");
         return "redirect:" + request.getHeader("referer");
     }
 

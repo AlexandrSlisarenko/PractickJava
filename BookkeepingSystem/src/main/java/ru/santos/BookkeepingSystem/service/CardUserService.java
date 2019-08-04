@@ -11,6 +11,7 @@ import ru.santos.BookkeepingSystem.repos.Card.BooksInOrderUserRepo;
 import ru.santos.BookkeepingSystem.repos.Card.OrderUserRepo;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 
@@ -80,7 +81,6 @@ public class CardUserService {
                 transport.setPriceOrder(orderUserNotPaid.getPrice());
                 transport.setNameAndQuantityBook(getTitleAndCountBook(booksInOrderUserRepo.findByOrderUserId(orderUserNotPaid.getId())));
                 transport.setBooksOrder(getBooksOrder(booksInOrderUserRepo.findByOrderUserId(orderUserNotPaid.getId())));
-                ;
                 transport.setBooksIdInOrder(getBookIdInOrder(booksInOrderUserRepo.findByOrderUserId(orderUserNotPaid.getId())));
             }
         }
@@ -244,8 +244,14 @@ public class CardUserService {
         return result;
     }
 
-    public void orderToSuppliers(String bookId, String author, String quantity){
-        manager.createNewOrder(bookId,author,quantity);
+    public void orderToSuppliers(Book book, String quantity){
+        Date now = new Date();
+        if((now.getTime() - book.getDataFirstDelivery().getTime()) > Long.parseLong(manager.getPausa()))
+            manager.createNewOrder(book.getTitle(),book.getAuthor(),quantity);
+        else{
+            Long q = Math.round(Integer.parseInt(quantity)*1.3);
+            manager.createNewOrder(book.getTitle(),book.getAuthor(),q.toString());
+        }
     }
 
     public boolean testCheckoutFreeBookInStore(OrderUser order){
